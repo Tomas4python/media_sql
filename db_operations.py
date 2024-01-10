@@ -1,5 +1,20 @@
+# Import libraries
 import sqlite3
 from typing import Optional
+
+
+def initialize_database(db_name: str) -> None:
+    """Create a database and its table if they do not exist."""
+    conn = create_connection(db_name)
+    if conn:
+        if not check_table_exists(conn, "movies"):
+            print(f"Table 'movies' does not exist in '{db_name}'. Creating new table.")
+            create_table(conn)
+        else:
+            print(f"Table 'movies' exists in '{db_name}'.")
+        conn.close()
+    else:
+        print(f"Failed to create a database connection for '{db_name}'.")
 
 
 def create_connection(db_file: str) -> Optional[sqlite3.Connection]:
@@ -8,10 +23,10 @@ def create_connection(db_file: str) -> Optional[sqlite3.Connection]:
 
     try:
         conn = sqlite3.connect(db_file)
-        print(f"Connected to SQLite database: {db_file}")
+        print(f"Connected to SQLite database: {db_file}.")
         return conn
     except sqlite3.Error as e:
-        print(f"Error connecting to database: {e}")
+        print(f"Error connecting to database: {e}.")
         return None
 
 
@@ -26,7 +41,7 @@ def check_table_exists(conn: sqlite3.Connection, table_name: str) -> bool:
         else:
             return False
     except sqlite3.Error as e:
-        print(f"Error checking table existence: {e}")
+        print(f"Error checking table existence: {e}.")
         return False
 
 
@@ -63,7 +78,7 @@ def movie_exists(conn: sqlite3.Connection, url: str) -> bool:
         cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
         return cur.fetchone() is not None
     except sqlite3.Error as e:
-        print(f"Error checking if movie exists: {e}")
+        print(f"Error checking if movie exists: {e}.")
         return False
 
 
@@ -76,6 +91,24 @@ def insert_movie(conn: sqlite3.Connection, movie: tuple) -> None:
     cur = conn.cursor()
     cur.execute(sql, movie)
     conn.commit()
+
+
+def execute_query(query: str, databases: list[str]) -> list[tuple]:
+    """Execute a query on both databases and return the combined results."""
+    results = []
+    for database in databases:
+        conn = create_connection(database)
+        if conn:
+            try:
+                cur = conn.cursor()
+                cur.execute(query)
+                results.extend(cur.fetchall())
+                conn.close()
+            except sqlite3.Error as e:
+                print(f"Error executing query on database '{database}': {e}.")
+                if conn:
+                    conn.close()
+    return results
 
 
 def remove_duplicate_movies(conn: sqlite3.Connection) -> None:
@@ -99,8 +132,8 @@ def remove_duplicate_movies(conn: sqlite3.Connection) -> None:
             cur.executemany("DELETE FROM movies WHERE id = ?", [(id,) for id in ids_to_delete])
 
         conn.commit()
-        print(f"Removed duplicates for {len(duplicates)} URLs")
+        print(f"Removed duplicates for {len(duplicates)} URLs.")
 
     except sqlite3.Error as e:
-        print(f"Error removing duplicates: {e}")
+        print(f"Error removing duplicates: {e}.")
         conn.rollback()

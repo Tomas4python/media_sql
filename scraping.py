@@ -53,13 +53,17 @@ def accept_cookies(driver):
 def load_lazy_content(driver, scroll_step=Config.lazy_scroll_step, wait_time=Config.wait_time):
     """Scroll epika.lrt.lt page to load lazy content"""
 
+    # Get the current scroll position
+    current_position = driver.execute_script("return window.pageYOffset || document.documentElement.scrollTop")
+    print(f"\nCurrent position: {current_position}")
+
     # Find max height of the page
     max_height = driver.execute_script("return document.body.scrollHeight")
     print(f"Max height: {max_height}")
 
     # Step by step scroll page while content downloads
     print("Scrolling...")
-    for scroll_position in range(0, max_height, scroll_step):
+    for scroll_position in range(current_position, max_height, scroll_step):
         print(f"Scroll position: {scroll_position}", end='\r')
         driver.execute_script(f"window.scrollTo(0, {scroll_position});")
         time.sleep(wait_time)
@@ -95,7 +99,7 @@ def shallow_scrape_epika(driver: webdriver.Chrome) -> list[tuple[str, str, str]]
 
     # Loop through all search strings
     for ind, search_string in enumerate(Config.list_search_strings_epika):
-        print(f"Shallow scraping - page {ind + 1} of {len(Config.list_search_strings_epika)}")
+        print(f"\nShallow scraping - page {ind + 1} of {len(Config.list_search_strings_epika)}")
         counter_str_used = 0  # To count additions in relation to search string
         try:
             # Open the webpage
@@ -228,38 +232,22 @@ def decline_cookies(driver):
 def click_optional_buttons(driver: webdriver.Chrome):
     """Clicks on lrt.lt/tema/filmai page optional buttons if they appear."""
 
-    try:
-        # Click acceptance of 7 years age button if it appears
-        age_7_button = WebDriverWait(driver, 5).until(
-            EC.element_to_be_clickable((By.XPATH, "//button[.//span[text()='Man jau yra 7 metai']]"))
-        )
-        age_7_button.click()
-        print("\nClicked 7 years age acceptance button.")
+    buttons_to_check = [
+        ("//button[.//span[text()='Man jau yra 7 metai']]", "\nClicked 7 years age acceptance button.", "\n7 years age acceptance button not found."),
+        ("//button[.//span[text()='Man jau yra 14 metų']]", "Clicked 14 years age acceptance button.", "14 years age acceptance button not found."),
+        ("//button[.//span[text()='Man jau yra 18 metų']]", "Clicked 18 years age acceptance button.", "18 years age acceptance button not found."),
+        ("//a[text()='Daugiau']", "Clicked 'Load more' button.", "'Load more' button not found.")
+    ]
 
-    except (NoSuchElementException, ElementNotInteractableException, TimeoutException):
-        print("\n7 years age acceptance button not found.")
-
-    try:
-        # Click acceptance of 14 years age button if it appears
-        age_14_button = WebDriverWait(driver, 5).until(
-            EC.element_to_be_clickable((By.XPATH, "//button[.//span[text()='Man jau yra 14 metų']]"))
-        )
-        age_14_button.click()
-        print("Clicked 14 years age acceptance button.")
-
-    except (NoSuchElementException, ElementNotInteractableException, TimeoutException):
-        print("14 years age acceptance button not found.")
-
-    try:
-        # Click "Load More" button if it appears
-        load_more_button = WebDriverWait(driver, 5).until(
-            EC.element_to_be_clickable((By.XPATH, "//a[text()='Daugiau']"))
-        )
-        load_more_button.click()
-        print("Clicked 'Load more' button.")
-
-    except (NoSuchElementException, ElementNotInteractableException, TimeoutException):
-        print("'Load more' button not found.")
+    for xpath, success_message, fail_message in buttons_to_check:
+        try:
+            if driver.find_elements(By.XPATH, xpath):
+                WebDriverWait(driver, 3).until(
+                    EC.element_to_be_clickable((By.XPATH, xpath))
+                ).click()
+                print(success_message)
+        except (NoSuchElementException, ElementNotInteractableException, TimeoutException):
+            print(fail_message)
 
 
 def convert_duration_to_minutes(duration_str: str) -> int:
@@ -288,16 +276,20 @@ def shallow_scrape_mediateka(driver: webdriver.Chrome) -> list[tuple[str, str, s
     try:
         # Open the webpage
         driver.get("https://www.lrt.lt/tema/filmai")
+        time.sleep(2) # Allow cookie consent to appear
+        decline_cookies(driver)
         print("Starting downloading web content...")
 
         i = 0
         while True:
             try:
+                # Easy scroll the page to the bottom to download its content
+                load_lazy_content(driver)
                 # Find and click the "Load More" button
                 load_more_button = driver.find_element(By.XPATH, '//a[@class="btn btn--lg section__button"]')
                 load_more_button.click()
                 i += 1
-                print(f"Load more button clicked {i} times", end='\r')
+                print(f"\nLoad more button clicked {i} times")
                 time.sleep(2)  # Wait for the page to load more content
 
             except (NoSuchElementException, ElementNotInteractableException):
@@ -327,8 +319,7 @@ def shallow_scrape_mediateka(driver: webdriver.Chrome) -> list[tuple[str, str, s
             link = title_element.get_attribute("href")
 
             # Extract image link
-            image_link = block.find_element(By.CSS_SELECTOR,
-                                            ".media-block__wrapper img.media-block__image").get_attribute(
+            image_link = block.find_element(By.CSS_SELECTOR, ".media-block__image").get_attribute(
                 "src")
 
             # Extract the duration
@@ -357,7 +348,7 @@ def shallow_scrape_mediateka(driver: webdriver.Chrome) -> list[tuple[str, str, s
 
 def deep_scrape_mediateka(
         driver: webdriver.Chrome, list_of_movies: list[tuple[str, str, str, str, str]]
-        ) -> list[tuple[str, Optional[bytes], str, int, int, str, str, int]]:
+) -> list[tuple[str, Optional[bytes], str, int, int, str, str, int]]:
     """Scrape lrt.lt/tema/filmai particular movie page for movie information."""
 
     print("Starting deep scraping...")
@@ -411,9 +402,11 @@ def deep_scrape_mediateka(
                 duration = convert_duration_to_minutes(movie[3])
                 views = int(movie[4]) if movie[4].isdigit() else None
 
-                print(f"Title: {movie[0]} | Description: {description[:20]} | Release year: {release_year} | Genre: {genre} | Duration: {duration} | Views: {views}\n")
+                print(
+                    f"Title: {movie[0]} | Description: {description[:20]} | Release year: {release_year} | Genre: {genre} | Duration: {duration} | Views: {views}\n")
                 # Append the movie data to the list
-                list_of_movie_data.append((movie[0], image, description, release_year, duration, genre, movie[1], views))
+                list_of_movie_data.append(
+                    (movie[0], image, description, release_year, duration, genre, movie[1], views))
 
                 assert description is not None, "Description is None"
                 assert release_year is not None, "Release year is None"

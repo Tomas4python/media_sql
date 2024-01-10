@@ -1,11 +1,15 @@
 class Config:
 
-    # Set up Chrome driver options for epika.lrt.lt (--headless if False)
+    # Set databases
+    database_epika = "epika_movies.db"
+    database_mediateka = "mediateka_movies.db"
+
+    # Set up Chrome driver options (--headless if False)
     show_browser: bool = False
 
     # Set epika.lrt.lt page content lazy loading speed - scroll step and wait time in between
     lazy_scroll_step: int = 500
-    wait_time: int = 1
+    wait_time: int = 0.5
 
     # Set logging level for logging module
     logging_level = "INFO"
@@ -70,3 +74,15 @@ class Config:
         'pramoginis', 'trumpametražis', 'dokumentinis', 'spektaklis', 'naujienos',
         'apybraiža'
     ]
+
+    sample_queries = [
+        "SELECT * FROM movies WHERE genre = 'komedija';",
+        "SELECT * FROM movies WHERE duration > 90;",
+        "SELECT * FROM movies WHERE release_year < 1970;",
+        "SELECT * FROM movies WHERE description LIKE '%nuotykių%';",
+        "SELECT * FROM movies WHERE title LIKE '%dokumentinis%';",
+        "SELECT * FROM movies WHERE description LIKE '%dokumentinis%';",
+        "SELECT * FROM movies;",
+    ]
+
+    # Set scrape mediateka first_page or all
