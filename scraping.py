@@ -402,8 +402,7 @@ def deep_scrape_mediateka(
                 duration = convert_duration_to_minutes(movie[3])
                 views = int(movie[4]) if movie[4].isdigit() else None
 
-                print(
-                    f"Title: {movie[0]} | Description: {description[:20]} | Release year: {release_year} | Genre: {genre} | Duration: {duration} | Views: {views}\n")
+                print(f"Title: {movie[0]} | Description: {description[:20]} | Release year: {release_year} | Genre: {genre} | Duration: {duration} | Views: {views}\n")
                 # Append the movie data to the list
                 list_of_movie_data.append(
                     (movie[0], image, description, release_year, duration, genre, movie[1], views))

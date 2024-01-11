@@ -53,7 +53,7 @@ def run_gui():
             print("Please enter a valid SQL query.")
 
     def get_thumbnail(image_blob) -> ImageTk.PhotoImage:
-        """Convert the image blob to a PhotoImage object and resize to 160x90."""
+        """Convert the image blob to a PhotoImage object and resize."""
         try:
             with Image.open(io.BytesIO(image_blob)) as img:
                 # Resize the image
@@ -197,7 +197,7 @@ def run_gui():
     # Defining column attributes
     # Total width: 1900 pixels
     # Adjust other column definitions as needed
-    treeview.heading('#0', text="screenshot", anchor='center')
+    treeview.heading('#0', text="Screenshot", anchor='center')
     treeview.heading('#1', text="id", anchor='center')
     treeview.heading('#2', text="title", anchor='center')
     treeview.heading('#3', text="image", anchor='center')

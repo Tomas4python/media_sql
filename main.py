@@ -1,5 +1,5 @@
 # Scraping app of two media sites https://epika.lrt.lt and https://www.lrt.lt/tema/filmai
-# The app is coded with only purpose of learning python coding, in particular Selenium and sqlite3
+# The app is coded with only purpose of learning python coding, in particular Selenium and SQLite3
 # The app is coded with Python 3.11
 
 
