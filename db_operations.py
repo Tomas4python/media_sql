@@ -1,20 +1,26 @@
 # Import libraries
 import sqlite3
+import logging
 from typing import Optional
+
+
+# Create a logger
+logger = logging.getLogger(__name__)
 
 
 def initialize_database(db_name: str) -> None:
     """Create a database and its table if they do not exist."""
+
     conn = create_connection(db_name)
     if conn:
         if not check_table_exists(conn, "movies"):
-            print(f"Table 'movies' does not exist in '{db_name}'. Creating new table.")
+            logger.info("Table 'movies' does not exist in '%s'. Creating new table.",str(db_name))
             create_table(conn)
         else:
-            print(f"Table 'movies' exists in '{db_name}'.")
+            logger.info("Table 'movies' exists in '%s'.", str(db_name))
         conn.close()
     else:
-        print(f"Failed to create a database connection for '{db_name}'.")
+        logger.warning("Failed to create a database connection for '%s'.", str(db_name))
 
 
 def create_connection(db_file: str) -> Optional[sqlite3.Connection]:
@@ -23,10 +29,10 @@ def create_connection(db_file: str) -> Optional[sqlite3.Connection]:
 
     try:
         conn = sqlite3.connect(db_file)
-        print(f"Connected to SQLite database: {db_file}.")
+        logger.info("Connected to SQLite database: '%s'.", str(db_file))
         return conn
     except sqlite3.Error as e:
-        print(f"Error connecting to database: {e}.")
+        logger.exception("Error connecting to database: '%s'.", str(db_file))
         return None
 
 
@@ -41,7 +47,7 @@ def check_table_exists(conn: sqlite3.Connection, table_name: str) -> bool:
         else:
             return False
     except sqlite3.Error as e:
-        print(f"Error checking table existence: {e}.")
+        logger.exception("Error checking table existence.")
         return False
 
 
@@ -67,7 +73,7 @@ def create_table(conn: sqlite3.Connection) -> None:
         c = conn.cursor()
         c.execute(sql_create_movies_table)
     except sqlite3.Error as e:
-        print(e)
+        logger.exception("Error checking table existence")
 
 
 def movie_exists(conn: sqlite3.Connection, url: str) -> bool:
@@ -78,7 +84,7 @@ def movie_exists(conn: sqlite3.Connection, url: str) -> bool:
         cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
         return cur.fetchone() is not None
     except sqlite3.Error as e:
-        print(f"Error checking if movie exists: {e}.")
+        logger.exception(f"Error checking if movie exists.")
         return False
 
 
@@ -105,7 +111,7 @@ def execute_query(query: str, databases: list[str]) -> list[tuple]:
                 results.extend(cur.fetchall())
                 conn.close()
             except sqlite3.Error as e:
-                print(f"Error executing query on database '{database}': {e}.")
+                logger.exception("Error executing query on database '%s'.", str(database))
                 if conn:
                     conn.close()
     return results

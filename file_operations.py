@@ -3,11 +3,16 @@ import os
 import csv
 from datetime import datetime
 import sqlite3
+import logging
 
 # Import functions and classes from other modules of the app
 from db_operations import create_connection, movie_exists, insert_movie
 from scraping import shallow_scrape_epika, deep_scrape_epika, shallow_scrape_mediateka, \
     deep_scrape_mediateka
+
+
+# Create a logger
+logger = logging.getLogger(__name__)
 
 
 def shallow_scrape_wrapper(driver, database, filename):
@@ -16,7 +21,7 @@ def shallow_scrape_wrapper(driver, database, filename):
 
     # Check if previous shallow scrape exists, if new shallow scrape needed, delete csv file manually
     if os.path.exists(filename):
-        print(f"File '{filename}' already exists. Skipping shallow scrape.")
+        logger.info("File '%s' already exists. Skipping shallow scrape.", filename)
         return
 
     # Perform shallow scrape
@@ -24,19 +29,19 @@ def shallow_scrape_wrapper(driver, database, filename):
         results = shallow_scrape_epika(driver)
     else:
         results = shallow_scrape_mediateka(driver)
-    print(f"\nShallow scrape results returned: {len(results)}")
+    logger.info("Shallow scrape results returned: %s", len(results))
 
     # Filter out movies that already exist in the database by movie url (sometimes the titles are the same)
     conn = create_connection(database)
     results_filtered = [movie for movie in results if not movie_exists(conn, movie[1])]
     conn.close()
-    print(f"\nThe list of {len(results_filtered)} new movies prepared to add to database '{database}'")
+    logger.info("The list of %s new movies prepared to add to database '%s'", len(results_filtered), database)
 
     # Write filtered results to CSV file
     with open(filename, 'w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
         writer.writerows(results_filtered)
-        print(f"Shallow scraping data temporarily written to file '{filename}'")
+        logger.info(f"Shallow scraping data temporarily written to file '%s'", filename)
 
 
 def deep_scrape_wrapper(driver, database, shallow_filename):
@@ -44,7 +49,7 @@ def deep_scrape_wrapper(driver, database, shallow_filename):
 
     # Check if shallow scrape was successfully created
     if not os.path.exists(shallow_filename):
-        print(f"File '{shallow_filename}' does not exist. Cannot perform deep scrape.")
+        logger.info("File '%s' does not exist. Cannot perform deep scrape.", shallow_filename)
         return
 
     # Read data from the shallow scrape CSV file
@@ -57,7 +62,7 @@ def deep_scrape_wrapper(driver, database, shallow_filename):
         results = deep_scrape_epika(driver, data_list)
     else:
         results = deep_scrape_mediateka(driver, data_list)
-    print(f"\nDeep scrape results returned: {len(results)}")
+    logger.info("Deep scrape results returned: %s", len(results))
 
     # Write results to database
     conn = create_connection(database)
@@ -78,11 +83,11 @@ def deep_scrape_wrapper(driver, database, shallow_filename):
                 insert_movie(conn, movie_with_timestamp)
         # Commit the transaction
         conn.commit()
-        print(f"\n{counter} new movies added to database '{database}'")
+        logger.info("%s new movies added to database '%s'", counter, database)
     except sqlite3.Error as e:
         # Roll back any change if error occurs
         conn.rollback()
-        print(f"An error occurred: {e}")
+        logger.exception("An error occurred")
     finally:
         # Close the database connection
         conn.close()

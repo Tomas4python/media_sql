@@ -18,6 +18,10 @@ import re
 from config import Config
 
 
+# Create a logger
+logger = logging.getLogger(__name__)
+
+
 class WebDriverContext:
     """Context manager for scraping functions to load, start and quit Chrome driver"""
 
@@ -47,7 +51,7 @@ def accept_cookies(driver):
         ).click()
 
     except Exception as e:
-        print(f"Cookie consent handling error: {e}")
+        logger.warning("Cookie consent handling error: %s", e)
 
 
 def load_lazy_content(driver, scroll_step=Config.lazy_scroll_step, wait_time=Config.wait_time):
@@ -55,18 +59,19 @@ def load_lazy_content(driver, scroll_step=Config.lazy_scroll_step, wait_time=Con
 
     # Get the current scroll position
     current_position = driver.execute_script("return window.pageYOffset || document.documentElement.scrollTop")
-    print(f"\nCurrent position: {current_position}")
+    logger.info("Current position: %s", current_position)
 
     # Find max height of the page
     max_height = driver.execute_script("return document.body.scrollHeight")
-    print(f"Max height: {max_height}")
+    logger.info("Max height: %s", max_height)
 
     # Step by step scroll page while content downloads
-    print("Scrolling...")
+    logger.info("Scrolling...")
     for scroll_position in range(current_position, max_height, scroll_step):
         print(f"Scroll position: {scroll_position}", end='\r')
         driver.execute_script(f"window.scrollTo(0, {scroll_position});")
         time.sleep(wait_time)
+    print("\n")
 
     # Final scroll to the bottom to ensure all content is loaded
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
@@ -81,38 +86,38 @@ def read_image_from_url(url: str) -> Optional[bytes]:
         response.raise_for_status()
         return response.content
     except requests.RequestException as e:
-        print(f"Error while fetching the image: {e}")
+        logger.warning("Error while fetching the image: %s", e)
         return None
 
 
 def shallow_scrape_epika(driver: webdriver.Chrome) -> list[tuple[str, str, str]]:
     """Scrape epika.lrt.lt page for media information based on the list of search strings."""
 
-    print("Starting shallow scraping...")
+    logging.info("Starting shallow scraping...")
     # Open web page for the first time and accept the cookies
     driver.get("https://epika.lrt.lt/search")
     accept_cookies(driver)
-    print("Cookies accepted")
+    logging.info("Cookies accepted")
 
     # Initialize the list of movies for return as function result
     list_of_movies: list[tuple[str, str, str]] = []
 
     # Loop through all search strings
-    for ind, search_string in enumerate(Config.list_search_strings_epika):
-        print(f"\nShallow scraping - page {ind + 1} of {len(Config.list_search_strings_epika)}")
+    for ind, search_string in enumerate(Config.list_search_strings_epika, start=1):
+        logging.info("Shallow scraping - page %s of %s", ind, len(Config.list_search_strings_epika))
         counter_str_used = 0  # To count additions in relation to search string
         try:
             # Open the webpage
             driver.get(f"https://epika.lrt.lt/search?q={search_string}")
 
-            time.sleep(3)  # Allow to load whole body of the page
+            time.sleep(2)  # Allow to load whole body of the page
 
             # Easy scroll the page to the bottom to download its content
             load_lazy_content(driver)
 
             # Find all media blocks
             title_blocks = driver.find_elements(By.CSS_SELECTOR, ".tile--vod.tile")
-            print(f"\nFound {len(title_blocks)} movie title. Extracting...")
+            logging.info("Found %s movie title. Extracting...", len(title_blocks))
 
             for i, block in enumerate(title_blocks):
                 try:
@@ -122,24 +127,26 @@ def shallow_scrape_epika(driver: webdriver.Chrome) -> list[tuple[str, str, str]]
                     link_to_image = block.find_element(By.CLASS_NAME, "cover").get_attribute("src")
                     print("." * i, end='\r')
 
+                    # No way further with this movie, if one element is missing
+                    assert movie_title is not None, "Movie title is None"
+                    assert link_to_page is not None, "Link to page is None"
+                    assert link_to_image is not None, "Link to image is None"
                     # Check if the movie title is already in the list
                     if not any(link_to_page == existing_url for _, existing_url, _ in list_of_movies):
                         # Add the tuple to the list
                         counter_str_used += 1
                         list_of_movies.append((movie_title, link_to_page, link_to_image))
-                    assert movie_title is not None, "Movie title is None"
-                    assert link_to_page is not None, "Link to page is None"
-                    assert link_to_image is not None, "Link to image is None"
+
                 except NoSuchElementException as err:
-                    print(f"Element not found: {err}")
+                    logging.warning("Element not found: %s", err)
 
         except Exception as e:
-            print(f"An error occurred while processing '{search_string}': {e}")
+            logging.exception(f"An error occurred while processing '{search_string}'.", search_string)
 
         print(f'\nString: "{search_string}" | Returns: {len(title_blocks)} | Used: {counter_str_used}')
         time.sleep(2)  # Make pause between scraping next page
 
-    print("\nShallow scraping finished.")
+    logging.info("Shallow scraping finished.")
     return list_of_movies
 
 
@@ -147,11 +154,12 @@ def deep_scrape_epika(driver: webdriver.Chrome, list_of_movies: list[tuple[str, 
     tuple[str, bytes, str, int, int, str, str]]:
     """Scrape epika.lrt.lt particular movie page for additional information of the movie."""
 
-    print("Starting deep scraping...")
+    logging.info("Starting deep scraping...")
     # Open web page for the first time and accept the cookies
     driver.get("https://epika.lrt.lt/search")
+    time.sleep(1)
     accept_cookies(driver)
-    print("Cookies accepted")
+    logging.info("Cookies accepted")
 
     # Initialize the list of movie data for return as function result
     # Tuple structure: <title, image, description, release year, duration, genre, page url>
@@ -188,12 +196,12 @@ def deep_scrape_epika(driver: webdriver.Chrome, list_of_movies: list[tuple[str, 
                 genre = ', '.join(genre)
 
             except Exception as e:
-                print(f"Error extracting metadata: {e}")
+                logging.warning("Error extracting metadata: %s", e)
 
             try:
                 description = driver.find_element(By.CSS_SELECTOR, 'div.metadata-content__description').text.strip()
             except NoSuchElementException as err:
-                print(f"Description not found: {err}")
+                logging.warning("Description not found: %s", err)
                 description = ""
 
             image = read_image_from_url(movie[2])
@@ -209,11 +217,11 @@ def deep_scrape_epika(driver: webdriver.Chrome, list_of_movies: list[tuple[str, 
             assert image is not None, "Image is None"
 
         except Exception as e:
-            print(f"\nAn error occurred while processing '{movie[0]}': {e}")
+            logging.info("Element not found '%s': %s", movie[0], e)
 
-        time.sleep(2)  # Pause between scraping pages
+        time.sleep(1)  # Pause between scraping pages
 
-    print("\nDeep scraping finished.")
+    logging.info("Deep scraping finished.")
     return list_of_movie_data
 
 
@@ -224,16 +232,16 @@ def decline_cookies(driver):
         wait = WebDriverWait(driver, 10)  # Increased timeout
         wait.until(EC.presence_of_element_located((By.ID, "CybotCookiebotDialogBodyButtonDecline")))
         wait.until(EC.element_to_be_clickable((By.ID, "CybotCookiebotDialogBodyButtonDecline"))).click()
-        print("Clicked cookie decline button.")
+        logging.info("Clicked cookie decline button.")
     except Exception as e:
-        print(f"Cookie consent handling error: {e}")
+        logging.warning("Cookie consent handling error: %s", e)
 
 
 def click_optional_buttons(driver: webdriver.Chrome):
     """Clicks on lrt.lt/tema/filmai page optional buttons if they appear."""
 
     buttons_to_check = [
-        ("//button[.//span[text()='Man jau yra 7 metai']]", "\nClicked 7 years age acceptance button.", "\n7 years age acceptance button not found."),
+        ("//button[.//span[text()='Man jau yra 7 metai']]", "Clicked 7 years age acceptance button.", "7 years age acceptance button not found."),
         ("//button[.//span[text()='Man jau yra 14 metų']]", "Clicked 14 years age acceptance button.", "14 years age acceptance button not found."),
         ("//button[.//span[text()='Man jau yra 18 metų']]", "Clicked 18 years age acceptance button.", "18 years age acceptance button not found."),
         ("//a[text()='Daugiau']", "Clicked 'Load more' button.", "'Load more' button not found.")
@@ -245,9 +253,9 @@ def click_optional_buttons(driver: webdriver.Chrome):
                 WebDriverWait(driver, 3).until(
                     EC.element_to_be_clickable((By.XPATH, xpath))
                 ).click()
-                print(success_message)
+                logging.info(success_message)
         except (NoSuchElementException, ElementNotInteractableException, TimeoutException):
-            print(fail_message)
+            logging.info(fail_message)
 
 
 def convert_duration_to_minutes(duration_str: str) -> int:
@@ -271,14 +279,14 @@ def convert_duration_to_minutes(duration_str: str) -> int:
 def shallow_scrape_mediateka(driver: webdriver.Chrome) -> list[tuple[str, str, str, str, str]]:
     """Scrape lrt.lt/tema/filmai page for media information."""
 
-    print("Starting shallow scraping...")
+    logging.info("Starting shallow scraping...")
 
     try:
         # Open the webpage
         driver.get("https://www.lrt.lt/tema/filmai")
         time.sleep(2) # Allow cookie consent to appear
         decline_cookies(driver)
-        print("Starting downloading web content...")
+        logging.info("Starting downloading web content...")
 
         i = 0
         while True:
@@ -289,16 +297,16 @@ def shallow_scrape_mediateka(driver: webdriver.Chrome) -> list[tuple[str, str, s
                 load_more_button = driver.find_element(By.XPATH, '//a[@class="btn btn--lg section__button"]')
                 load_more_button.click()
                 i += 1
-                print(f"\nLoad more button clicked {i} times")
+                logging.info(f"Load more button clicked {i} times")
                 time.sleep(2)  # Wait for the page to load more content
 
             except (NoSuchElementException, ElementNotInteractableException):
-                print("\nNo more 'Load more' buttons.")
+                logging.info("No more 'Load more' buttons.")
                 break
 
         # Find all media blocks
         news_blocks = driver.find_elements(By.CLASS_NAME, "news")
-        print(f"\nBlocks loaded: {len(news_blocks)}")
+        logging.info("Blocks loaded: %s", len(news_blocks))
 
         # Initialize a list to store the tuples for return as function result
         media_info = []
@@ -338,11 +346,12 @@ def shallow_scrape_mediateka(driver: webdriver.Chrome) -> list[tuple[str, str, s
             # Add the tuple to the list
             media_info.append((title, link, image_link, duration, views))
 
-        print("\nShallow scraping finished.")
+        print("\n")
+        logging.info("Shallow scraping finished.")
         return media_info
 
     except Exception as e:
-        print(f"An error occurred during scraping: {e}")
+        logging.exception("An error occurred during scraping")
         return []
 
 
@@ -351,7 +360,7 @@ def deep_scrape_mediateka(
 ) -> list[tuple[str, Optional[bytes], str, int, int, str, str, int]]:
     """Scrape lrt.lt/tema/filmai particular movie page for movie information."""
 
-    print("Starting deep scraping...")
+    logging.info("Starting deep scraping...")
 
     # JavaScript to pause the video
     pause_video_script = """
@@ -363,6 +372,7 @@ def deep_scrape_mediateka(
 
     # Open web page for the first time and accept the cookies
     driver.get("https://www.lrt.lt/tema/filmai")
+    time.sleep(3)  # Allow cookie consent to download
     decline_cookies(driver)
 
     # Initialize the list of movie data for return as function result
@@ -370,7 +380,7 @@ def deep_scrape_mediateka(
     list_of_movie_data: list[tuple[str, Optional[bytes], str, int, int, str, str, int]] = []
 
     for ind, movie in enumerate(list_of_movies, start=1):
-        print(f"Scraping {ind} of {len(list_of_movies)}")
+        logging.info("Scraping %s of %s", ind, len(list_of_movies))
         try:
             driver.get(f"{movie[1]}")
             time.sleep(2)  # Allow the page to load
@@ -415,12 +425,12 @@ def deep_scrape_mediateka(
                 assert views is not None, "Views is None"
 
             except Exception as e:
-                print(f"Error extracting description: {e}")
+                logging.info("Element not found extracting description: %s", e)
 
         except Exception as e:
-            print(f"\nAn error occurred while processing '{movie[0]}': {e}")
+            logging.exception("An error occurred while processing '%s'", movie[0])
 
         time.sleep(1)  # Pause between scraping pages
 
-    print("\nDeep scraping finished.")
+    logging.info("Deep scraping finished.")
     return list_of_movie_data

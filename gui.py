@@ -4,12 +4,17 @@ from tkinter import ttk
 import tkinter.font as tkFont
 from PIL import Image, ImageTk
 import io
+import logging
 
 # Import functions and classes from other modules of the app
 from scraping import WebDriverContext
 from file_operations import shallow_scrape_wrapper, deep_scrape_wrapper
 from db_operations import execute_query as db_execute_query
 from config import Config
+
+
+# Create a logger
+logger = logging.getLogger(__name__)
 
 # Global variable for tooltip window
 tooltip_window = None
@@ -48,9 +53,9 @@ def run_gui():
                         row_data = ('',) + row
                         treeview.insert('', 'end', image=thumbnail, values=row)
             except Exception as e:
-                print(f"Error executing query: {e}")
+                logger.warning("Error executing query: %s", e)
         else:
-            print("Please enter a valid SQL query.")
+            logger.info("Please enter a valid SQL query.")
 
     def get_thumbnail(image_blob) -> ImageTk.PhotoImage:
         """Convert the image blob to a PhotoImage object and resize."""
@@ -66,7 +71,7 @@ def run_gui():
                     image_references[id(thumbnail)] = thumbnail
                     return thumbnail
         except Exception as e:
-            print(f"Error in get_thumbnail: {e}")
+            logger.warning("Error in get_thumbnail: %s", e)
             return None
 
     def show_tooltip(event):

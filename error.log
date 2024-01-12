@@ -1,0 +1,48 @@
+2024-01-12 19:47:10,503 - root - ERROR - 
+An error occurred while processing 'Žydrasis kaftanas' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:428
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 385, in deep_scrape_mediateka
+    click_optional_buttons(driver)
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 254, in click_optional_buttons
+    ).click()
+      ^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="btn btn--tertiary flex-grow-1 mr-xs-10" type="button" data-dismiss="modal">...</button> is not clickable at point (288, 384). Other element would receive the click: <div class="CybotCookiebotDialogBodyBottomWrapper">...</div>
+  (Session info: chrome-headless-shell=120.0.6099.217)
+Stacktrace:
+	GetHandleVerifier [0x00E56EE3+174339]
+	(No symbol) [0x00D80A51]
+	(No symbol) [0x00A96FF6]
+	(No symbol) [0x00ACE48E]
+	(No symbol) [0x00ACD09E]
+	(No symbol) [0x00ACB5F8]
+	(No symbol) [0x00ACAD7F]
+	(No symbol) [0x00AC2B4E]
+	(No symbol) [0x00AE700C]
+	(No symbol) [0x00AC25B0]
+	(No symbol) [0x00AE7414]
+	(No symbol) [0x00AFA104]
+	(No symbol) [0x00AE6DA6]
+	(No symbol) [0x00AC1034]
+	(No symbol) [0x00AC1F8D]
+	GetHandleVerifier [0x00EF4B1C+820540]
+	sqlite3_dbdata_init [0x00FB53EE+653550]
+	sqlite3_dbdata_init [0x00FB4E09+652041]
+	sqlite3_dbdata_init [0x00FA97CC+605388]
+	sqlite3_dbdata_init [0x00FB5D9B+656027]
+	(No symbol) [0x00D8FE6C]
+	(No symbol) [0x00D883B8]
+	(No symbol) [0x00D884DD]
+	(No symbol) [0x00D75818]
+	BaseThreadInitThunk [0x76507BA9+25]
+	RtlInitializeExceptionChain [0x7785BD2B+107]
+	RtlClearBits [0x7785BCAF+191]
+
