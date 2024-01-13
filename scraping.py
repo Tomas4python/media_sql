@@ -9,6 +9,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.remote.remote_connection import LOGGER
 import logging
+from logging import StreamHandler
 import requests
 from typing import Optional
 import time
@@ -157,7 +158,7 @@ def deep_scrape_epika(driver: webdriver.Chrome, list_of_movies: list[tuple[str, 
     logging.info("Starting deep scraping...")
     # Open web page for the first time and accept the cookies
     driver.get("https://epika.lrt.lt/search")
-    time.sleep(1)
+    time.sleep(2)
     accept_cookies(driver)
     logging.info("Cookies accepted")
 
@@ -297,6 +298,9 @@ def shallow_scrape_mediateka(driver: webdriver.Chrome) -> list[tuple[str, str, s
                 load_more_button = driver.find_element(By.XPATH, '//a[@class="btn btn--lg section__button"]')
                 load_more_button.click()
                 i += 1
+                # Debugging
+                if i == 2:
+                    break
                 logging.info(f"Load more button clicked {i} times")
                 time.sleep(2)  # Wait for the page to load more content
 

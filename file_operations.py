@@ -6,7 +6,7 @@ import sqlite3
 import logging
 
 # Import functions and classes from other modules of the app
-from db_operations import create_connection, movie_exists, insert_movie
+from db_operations import create_connection, movie_exists, insert_movie, remove_duplicate_movies
 from scraping import shallow_scrape_epika, deep_scrape_epika, shallow_scrape_mediateka, \
     deep_scrape_mediateka
 
@@ -94,12 +94,3 @@ def deep_scrape_wrapper(driver, database, shallow_filename):
 
     # Remove the shallow scrape file
     os.remove(shallow_filename)
-
-
-# def remove_duplicates_from_database(database):
-#     """Removes duplicate movies from database"""
-
-#     conn = create_connection(database)
-#     if conn:
-#         remove_duplicate_movies(conn)
-#         conn.close()

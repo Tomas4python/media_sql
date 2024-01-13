@@ -9,9 +9,8 @@ import logging
 # Import functions and classes from other modules of the app
 from scraping import WebDriverContext
 from file_operations import shallow_scrape_wrapper, deep_scrape_wrapper
-from db_operations import execute_query as db_execute_query
+from db_operations import execute_query as db_execute_query, remove_duplicate_movies
 from config import Config
-
 
 # Create a logger
 logger = logging.getLogger(__name__)
@@ -144,6 +143,11 @@ def run_gui():
             deep_scrape_wrapper(driver, Config.database_mediateka, shallow_filename='shallow_scrape_result_mediateka'
                                                                                     '.csv')
 
+    def remove_duplicates_from_databases() -> None:
+        """Checks and removes duplicates from databases"""
+        for database in [Config.database_epika, Config.database_mediateka]:
+            remove_duplicate_movies(database)
+
     # Main application window
     root = tk.Tk()
     root.geometry("1900x800")
@@ -155,10 +159,11 @@ def run_gui():
     # Adding menu items
     scrape_menu = tk.Menu(menu_bar, tearoff=0)
     menu_bar.add_cascade(label="Scrape menu", menu=scrape_menu)
-    scrape_menu.add_command(label="Shallow Scrape Epika", command=lambda: proceed_shallow_scrape_epika())
-    scrape_menu.add_command(label="Deep Scrape Epika", command=lambda: proceed_deep_scrape_epika())
-    scrape_menu.add_command(label="Shallow Scrape Mediateka", command=lambda: proceed_shallow_scrape_mediateka())
-    scrape_menu.add_command(label="Deep Scrape Mediateka", command=lambda: proceed_deep_scrape_mediateka())
+    scrape_menu.add_command(label="Shallow scrape Epika", command=lambda: proceed_shallow_scrape_epika())
+    scrape_menu.add_command(label="Deep scrape Epika", command=lambda: proceed_deep_scrape_epika())
+    scrape_menu.add_command(label="Shallow scrape Mediateka", command=lambda: proceed_shallow_scrape_mediateka())
+    scrape_menu.add_command(label="Deep scrape Mediateka", command=lambda: proceed_deep_scrape_mediateka())
+    scrape_menu.add_command(label="Remove duplicate movies from databases", command=lambda: remove_duplicates_from_databases())
 
     # Placeholder text for Entry and Combobox
     entry_placeholder = 'Write here your SQL query'

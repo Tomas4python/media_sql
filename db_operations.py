@@ -116,30 +116,35 @@ def execute_query(query: str, databases: list[str]) -> list[tuple]:
                     conn.close()
     return results
 
-#
-# def remove_duplicate_movies(conn: sqlite3.Connection) -> None:
-#     """Remove duplicate movies from the database, keeping only the first insertion."""
-#
-#     try:
-#         cur = conn.cursor()
-#
-#         # Find duplicate URLs
-#         cur.execute("SELECT url FROM movies GROUP BY url HAVING COUNT(url) > 1")
-#         duplicates = cur.fetchall()
-#
-#         for url in duplicates:
-#             # For each duplicate URL, find all movie IDs
-#             cur.execute("SELECT id FROM movies WHERE url = ?", (url[0],))
-#             ids = [id_tuple[0] for id_tuple in cur.fetchall()]
-#
-#             # Keep the first movie (based on some criteria, e.g., the earliest date_of_first_finding)
-#             # and delete the rest
-#             ids_to_delete = ids[1:]  # Adjust as needed based on which one you want to keep
-#             cur.executemany("DELETE FROM movies WHERE id = ?", [(id,) for id in ids_to_delete])
-#
-#         conn.commit()
-#         print(f"Removed duplicates for {len(duplicates)} URLs.")
-#
-#     except sqlite3.Error as e:
-#         print(f"Error removing duplicates: {e}.")
-#         conn.rollback()
+
+def remove_duplicate_movies(database) -> None:
+    """Remove duplicate movies from the database, keeping only the first insertion."""
+
+    try:
+        conn = create_connection(database)
+        cur = conn.cursor()
+
+        # Find duplicate URLs
+        cur.execute("SELECT url FROM movies GROUP BY url HAVING COUNT(url) > 1")
+        duplicates = cur.fetchall()
+
+        for url in duplicates:
+            # For each duplicate URL, find all movie IDs
+            cur.execute("SELECT id FROM movies WHERE url = ?", (url[0],))
+            ids = [id_tuple[0] for id_tuple in cur.fetchall()]
+
+            # Keep the first movie (based on some criteria, e.g., the earliest date_of_first_finding)
+            # and delete the rest
+            ids_to_delete = ids[1:]  # Adjust as needed based on which one you want to keep
+            cur.executemany("DELETE FROM movies WHERE id = ?", [(id,) for id in ids_to_delete])
+
+        conn.commit()
+        logger.info("Removed duplicates for %s URLs.", len(duplicates))
+        conn.close()
+
+    except sqlite3.Error as e:
+        logger.exception("Error removing duplicates.")
+        conn.rollback()
+
+    finally:
+        conn.close()

@@ -83,6 +83,8 @@ class Config:
         "SELECT * FROM movies WHERE title LIKE '%dokumentinis%';",
         "SELECT * FROM movies WHERE description LIKE '%dokumentinis%';",
         "SELECT * FROM movies;",
+        "SELECT * FROM movies WHERE url IN (SELECT url FROM movies GROUP BY url HAVING COUNT(url) > 1);",
+        "SELECT * FROM movies WHERE title IN (SELECT title FROM movies GROUP BY title HAVING COUNT(title) > 1);"
     ]
 
     # Set scrape mediateka first_page or all
