@@ -10,7 +10,14 @@ import logging
 from scraping import WebDriverContext
 from file_operations import shallow_scrape_wrapper, deep_scrape_wrapper
 from db_operations import execute_query as db_execute_query, remove_duplicate_movies
-from config import Config
+from config_loader import Config
+
+
+# Create an instance of the Config class
+config = Config().settings
+
+# Set the logging level for PIL.PngImagePlugin to WARNING
+logging.getLogger('PIL.PngImagePlugin').setLevel(logging.WARNING)
 
 # Create a logger
 logger = logging.getLogger(__name__)
@@ -28,7 +35,7 @@ def run_gui():
 
     def execute_query(query: str) -> list[tuple]:
         """Execute a query on the specified databases and return the combined results."""
-        return db_execute_query(query, [Config.database_epika, Config.database_mediateka])
+        return db_execute_query(query, [config["databases"]["database_epika"], config["databases"]["database_mediateka"]])
 
     def update_treeview():
         """Updates Treeview with query results"""
@@ -125,32 +132,33 @@ def run_gui():
     def proceed_shallow_scrape_epika() -> None:
         """Perform shallow scrape of epika.lrt.lt"""
         with WebDriverContext() as driver:
-            shallow_scrape_wrapper(driver, Config.database_epika, filename='shallow_scrape_result_epika.csv')
+            shallow_scrape_wrapper(driver, config["databases"]["database_epika"], filename='shallow_scrape_result_epika.csv')
 
     def proceed_deep_scrape_epika() -> None:
         """Perform deep scrape of epika.lrt.lt"""
         with WebDriverContext() as driver:
-            deep_scrape_wrapper(driver, Config.database_epika, shallow_filename='shallow_scrape_result_epika.csv')
+            deep_scrape_wrapper(driver, config["databases"]["database_epika"], shallow_filename='shallow_scrape_result_epika.csv')
 
     def proceed_shallow_scrape_mediateka() -> None:
         """Perform shallow scrape of lrt.lt/tema/filmai"""
         with WebDriverContext() as driver:
-            shallow_scrape_wrapper(driver, Config.database_mediateka, filename='shallow_scrape_result_mediateka.csv')
+            shallow_scrape_wrapper(driver, config["databases"]["database_mediateka"], filename='shallow_scrape_result_mediateka.csv')
 
     def proceed_deep_scrape_mediateka() -> None:
         """Perform deep scrape of lrt.lt/tema/filmai"""
         with WebDriverContext() as driver:
-            deep_scrape_wrapper(driver, Config.database_mediateka, shallow_filename='shallow_scrape_result_mediateka'
+            deep_scrape_wrapper(driver, config["databases"]["database_mediateka"], shallow_filename='shallow_scrape_result_mediateka'
                                                                                     '.csv')
 
     def remove_duplicates_from_databases() -> None:
         """Checks and removes duplicates from databases"""
-        for database in [Config.database_epika, Config.database_mediateka]:
+        for database in [config["databases"]["database_epika"], config["databases"]["database_mediateka"]]:
             remove_duplicate_movies(database)
 
     # Main application window
     root = tk.Tk()
-    root.geometry("1900x800")
+    root.geometry(config["gui"]["gui_window_size"])
+    root.title(config["gui"]["app_name"])
 
     # Menu
     menu_bar = tk.Menu(root)
@@ -163,7 +171,8 @@ def run_gui():
     scrape_menu.add_command(label="Deep scrape Epika", command=lambda: proceed_deep_scrape_epika())
     scrape_menu.add_command(label="Shallow scrape Mediateka", command=lambda: proceed_shallow_scrape_mediateka())
     scrape_menu.add_command(label="Deep scrape Mediateka", command=lambda: proceed_deep_scrape_mediateka())
-    scrape_menu.add_command(label="Remove duplicate movies from databases", command=lambda: remove_duplicates_from_databases())
+    scrape_menu.add_command(label="Remove duplicate movies from databases",
+                            command=lambda: remove_duplicates_from_databases())
 
     # Placeholder text for Entry and Combobox
     entry_placeholder = 'Write here your SQL query'
@@ -171,7 +180,7 @@ def run_gui():
 
     # SQL Combobox with placeholder
     sql_combo = ttk.Combobox(root, width=100)
-    sql_combo['values'] = [''] + Config.sample_queries
+    sql_combo['values'] = [''] + config["gui"]["sample_queries"]
     sql_combo.set(combo_placeholder)
     sql_combo.bind('<FocusIn>', on_combobox_click)
     sql_combo.bind('<FocusOut>', on_focusout_combobox)
@@ -222,16 +231,16 @@ def run_gui():
     treeview.heading('#12', text="views_count", anchor='center')
     treeview.heading('#13', text="is_memorable", anchor='center')
     treeview.column("id", width=20, anchor='center')
-    treeview.column("title", width=200, anchor='w')
-    treeview.column("image", width=50, anchor='center')
-    treeview.column("description", width=600, anchor='w')
+    treeview.column("title", width=150, anchor='w')
+    treeview.column("image", width=20, anchor='center')
+    treeview.column("description", width=400, anchor='w')
     treeview.column("release_year", width=20, anchor='center')
     treeview.column("duration", width=50, anchor='center')
     treeview.column("genre", width=100, anchor='w')
-    treeview.column("url", width=50, anchor='w')
+    treeview.column("url", width=70, anchor='w')
     treeview.column("date_of_first_finding", width=50, anchor='w')
     treeview.column("date_of_disappearance", width=20, anchor='w')
-    treeview.column("related_persons", width=50, anchor='w')
+    treeview.column("related_persons", width=20, anchor='w')
     treeview.column("views_count", width=20, anchor='center')
     treeview.column("is_memorable", width=20, anchor='center')
 

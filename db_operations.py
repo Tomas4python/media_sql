@@ -8,6 +8,19 @@ from typing import Optional
 logger = logging.getLogger(__name__)
 
 
+def loggable(f):
+    """A decorator that adds logging to a function."""
+    def _inner(*args):
+        logger.debug("Called function: '%s'", f.__name__)
+        res = f(*args)
+        if hasattr(res, '__len__'):
+            logger.debug("Function '%s' returned %s results", f.__name__, len(res))
+        else:
+            logger.debug("Function '%s' returned a %s", f.__name__, type(res).__name__)
+        return res
+    return _inner
+
+
 def initialize_database(db_name: str) -> None:
     """Create a database and its table if they do not exist."""
 
@@ -99,6 +112,7 @@ def insert_movie(conn: sqlite3.Connection, movie: tuple) -> None:
     conn.commit()
 
 
+@loggable
 def execute_query(query: str, databases: list[str]) -> list[tuple]:
     """Execute a query on both databases and return the combined results."""
     results = []

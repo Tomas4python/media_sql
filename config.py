@@ -11,9 +11,6 @@ class Config:
     lazy_scroll_step: int = 500
     wait_time: int = 0.5
 
-    # Set logging level for logging module
-    logging_level = "INFO"
-
     # Set how many epika.lrt.lt search pages results to scrape by stetting search strings in list
     list_search_strings_epika: list[str] = ["Komedija"]
 

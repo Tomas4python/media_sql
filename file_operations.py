@@ -4,9 +4,10 @@ import csv
 from datetime import datetime
 import sqlite3
 import logging
+import yaml
 
 # Import functions and classes from other modules of the app
-from db_operations import create_connection, movie_exists, insert_movie, remove_duplicate_movies
+from db_operations import create_connection, movie_exists, insert_movie
 from scraping import shallow_scrape_epika, deep_scrape_epika, shallow_scrape_mediateka, \
     deep_scrape_mediateka
 
@@ -45,7 +46,7 @@ def shallow_scrape_wrapper(driver, database, filename):
 
 
 def deep_scrape_wrapper(driver, database, shallow_filename):
-    """Checks if shallow scrape file exist and writes deep scrape results to sqlite3 database"""
+    """Checks if shallow scrape file exist and writes deep scrape results to SQLite3 database"""
 
     # Check if shallow scrape was successfully created
     if not os.path.exists(shallow_filename):

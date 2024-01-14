@@ -9,19 +9,20 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.remote.remote_connection import LOGGER
 import logging
-from logging import StreamHandler
 import requests
 from typing import Optional
 import time
 import re
 
 # Import functions and classes from other modules of the app
-from config import Config
+from config_loader import Config
 
 
 # Create a logger
 logger = logging.getLogger(__name__)
 
+# Create an instance of the Config class
+config = Config().settings
 
 class WebDriverContext:
     """Context manager for scraping functions to load, start and quit Chrome driver"""
@@ -31,7 +32,7 @@ class WebDriverContext:
         chrome_options = Options()
         LOGGER.setLevel(logging.CRITICAL)  # Limit selenium logs
         chrome_options.add_argument("--log-level=3")  # Set log level to minimize messages
-        if Config.show_browser is False:
+        if config["scraping"]["show_browser"] is False:
             chrome_options.add_argument("--headless")  # Run in headless mode
 
         # Set up WebDriver
@@ -55,7 +56,7 @@ def accept_cookies(driver):
         logger.warning("Cookie consent handling error: %s", e)
 
 
-def load_lazy_content(driver, scroll_step=Config.lazy_scroll_step, wait_time=Config.wait_time):
+def load_lazy_content(driver, scroll_step=config["scraping"]["lazy_scroll_step"], wait_time=config["scraping"]["wait_time"]):
     """Scroll epika.lrt.lt page to load lazy content"""
 
     # Get the current scroll position
@@ -104,8 +105,8 @@ def shallow_scrape_epika(driver: webdriver.Chrome) -> list[tuple[str, str, str]]
     list_of_movies: list[tuple[str, str, str]] = []
 
     # Loop through all search strings
-    for ind, search_string in enumerate(Config.list_search_strings_epika, start=1):
-        logging.info("Shallow scraping - page %s of %s", ind, len(Config.list_search_strings_epika))
+    for ind, search_string in enumerate(config["scraping"]["list_search_strings_epika"]["short"], start=1):
+        logging.info("Shallow scraping - page %s of %s", ind, len(config["scraping"]["list_search_strings_epika"]["short"]))
         counter_str_used = 0  # To count additions in relation to search string
         try:
             # Open the webpage
@@ -403,7 +404,7 @@ def deep_scrape_mediateka(
 
                 # Look in the description if there genre is mentioned
                 all_text_lower = description.lower()
-                for genre_candidate in Config.list_of_genres_mediateka:
+                for genre_candidate in config["scraping"]["list_of_genres_mediateka"]:
                     if genre_candidate in all_text_lower:
                         genre = genre_candidate
                         break

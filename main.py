@@ -14,14 +14,17 @@ logger.info("Initialize logger")
 
 # Import functions and classes from other modules of the app
 from db_operations import initialize_database
-from config import Config
+from config_loader import Config
 import gui
+
+# Create an instance of the Config class
+config = Config().settings
 
 
 def main():
     # Initialize both databases
-    initialize_database(Config.database_epika)
-    initialize_database(Config.database_mediateka)
+    initialize_database(config["databases"]["database_epika"])
+    initialize_database(config["databases"]["database_mediateka"])
     # Run graphical user interface
     gui.run_gui()
 
