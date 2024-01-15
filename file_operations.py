@@ -4,7 +4,6 @@ import csv
 from datetime import datetime
 import sqlite3
 import logging
-import yaml
 
 # Import functions and classes from other modules of the app
 from db_operations import create_connection, movie_exists, insert_movie

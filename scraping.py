@@ -15,7 +15,7 @@ import time
 import re
 
 # Import functions and classes from other modules of the app
-from config_loader import Config
+from config_loader import Config, LargeStrings
 
 
 # Create a logger
@@ -23,6 +23,7 @@ logger = logging.getLogger(__name__)
 
 # Create an instance of the Config class
 config = Config().settings
+
 
 class WebDriverContext:
     """Context manager for scraping functions to load, start and quit Chrome driver"""
@@ -104,9 +105,15 @@ def shallow_scrape_epika(driver: webdriver.Chrome) -> list[tuple[str, str, str]]
     # Initialize the list of movies for return as function result
     list_of_movies: list[tuple[str, str, str]] = []
 
+    # In demo mode perform less movie searches and scrape less pages
+    if config["demo"]["is_demo"]:
+        list_search_strings_epika = config["demo"]["default_demo_search_strings_epika"]
+    else:
+        list_search_strings_epika = LargeStrings.list_search_strings_epika
+
     # Loop through all search strings
-    for ind, search_string in enumerate(config["scraping"]["list_search_strings_epika"]["short"], start=1):
-        logging.info("Shallow scraping - page %s of %s", ind, len(config["scraping"]["list_search_strings_epika"]["short"]))
+    for ind, search_string in enumerate(list_search_strings_epika, start=1):
+        logging.info("Shallow scraping - page %s of %s", ind, len(LargeStrings.list_search_strings_epika))
         counter_str_used = 0  # To count additions in relation to search string
         try:
             # Open the webpage
@@ -299,8 +306,8 @@ def shallow_scrape_mediateka(driver: webdriver.Chrome) -> list[tuple[str, str, s
                 load_more_button = driver.find_element(By.XPATH, '//a[@class="btn btn--lg section__button"]')
                 load_more_button.click()
                 i += 1
-                # Debugging
-                if i == 2:
+                # Don't scrape entire page if app is in demo mode
+                if config["demo"]["is_demo"] and i == config["demo"]["num_demo_pages_mediateka"]:
                     break
                 logging.info(f"Load more button clicked {i} times")
                 time.sleep(2)  # Wait for the page to load more content
@@ -404,7 +411,7 @@ def deep_scrape_mediateka(
 
                 # Look in the description if there genre is mentioned
                 all_text_lower = description.lower()
-                for genre_candidate in config["scraping"]["list_of_genres_mediateka"]:
+                for genre_candidate in LargeStrings.list_of_genres_mediateka:
                     if genre_candidate in all_text_lower:
                         genre = genre_candidate
                         break

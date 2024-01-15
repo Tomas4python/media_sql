@@ -18,7 +18,7 @@ class Config:
 
 
 class LargeStrings:
-    """Class to keep large strings used for scraping and GUI configuration"""
+    """Class to keep large lists of strings used for scraping and GUI configuration"""
 
     # Set how many epika.lrt.lt search pages results to scrape by stetting search strings in list
     list_search_strings_epika: list[str] = [
@@ -64,7 +64,7 @@ class LargeStrings:
             "ast", "not", "ati", "eve", "tio", "rat", "ere", "ell", "end", "act",
         ]
 
-    # Set the list of possible genre titles to search in description for lrt.lt/tema/filmai
+    # Set the list of possible genre titles for search in description lrt.lt/tema/filmai
     list_of_genres_mediateka: list[str] = [
         'komedija', 'drama', 'trileris', 'nuotykių', 'elito', 'vaidybinis',
         'pramoginis', 'trumpametražis', 'dokumentinis', 'spektaklis', 'naujienos',
