@@ -300,16 +300,16 @@ def shallow_scrape_mediateka(driver: webdriver.Chrome) -> list[tuple[str, str, s
         i = 0
         while True:
             try:
-                # Easy scroll the page to the bottom to download its content
-                load_lazy_content(driver)
                 # Find and click the "Load More" button
                 load_more_button = driver.find_element(By.XPATH, '//a[@class="btn btn--lg section__button"]')
                 load_more_button.click()
+                logging.info(f"Load more button clicked {i} times")
+                # Easy scroll the page to the bottom to download its content
+                load_lazy_content(driver)
                 i += 1
                 # Don't scrape entire page if app is in demo mode
                 if config["demo"]["is_demo"] and i == config["demo"]["num_demo_pages_mediateka"]:
                     break
-                logging.info(f"Load more button clicked {i} times")
                 time.sleep(2)  # Wait for the page to load more content
 
             except (NoSuchElementException, ElementNotInteractableException):

@@ -7,7 +7,7 @@ import argparse
 import logging.config
 
 # Configure logging
-logging.config.fileConfig('logging.ini')
+logging.config.fileConfig('logging.ini')  # Load config file before import of other modules
 
 # Import functions and classes from other modules of the app
 from db_operations import initialize_database

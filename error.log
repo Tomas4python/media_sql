@@ -1033,3 +1033,148 @@ Stacktrace:
 	RtlInitializeExceptionChain [0x7778BD2B+107]
 	RtlClearBits [0x7778BCAF+191]
 
+2024-01-16 11:23:26,064 - root - ERROR - An error occurred while processing 'Herkus Mantas (su garsiniu vaizdavimu)' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:443
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 399, in deep_scrape_mediateka
+    driver.execute_script(pause_video_script)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 408, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.217)
+Stacktrace:
+	GetHandleVerifier [0x00866EE3+174339]
+	(No symbol) [0x00790A51]
+	(No symbol) [0x004A6FF6]
+	(No symbol) [0x0048EFE7]
+	(No symbol) [0x004FB53B]
+	(No symbol) [0x00509E7B]
+	(No symbol) [0x004F6DA6]
+	(No symbol) [0x004D1034]
+	(No symbol) [0x004D1F8D]
+	GetHandleVerifier [0x00904B1C+820540]
+	sqlite3_dbdata_init [0x009C53EE+653550]
+	sqlite3_dbdata_init [0x009C4E09+652041]
+	sqlite3_dbdata_init [0x009B97CC+605388]
+	sqlite3_dbdata_init [0x009C5D9B+656027]
+	(No symbol) [0x0079FE6C]
+	(No symbol) [0x007983B8]
+	(No symbol) [0x007984DD]
+	(No symbol) [0x00785818]
+	BaseThreadInitThunk [0x76457BA9+25]
+	RtlInitializeExceptionChain [0x7778BD2B+107]
+	RtlClearBits [0x7778BCAF+191]
+
+2024-01-16 11:23:27,080 - root - ERROR - An error occurred while processing 'Grufo vaikelis' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:443
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 397, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.217)
+Stacktrace:
+	GetHandleVerifier [0x00866EE3+174339]
+	(No symbol) [0x00790A51]
+	(No symbol) [0x004A6FF6]
+	(No symbol) [0x0048EFE7]
+	(No symbol) [0x004FB53B]
+	(No symbol) [0x00509E7B]
+	(No symbol) [0x004F6DA6]
+	(No symbol) [0x004D1034]
+	(No symbol) [0x004D1F8D]
+	GetHandleVerifier [0x00904B1C+820540]
+	sqlite3_dbdata_init [0x009C53EE+653550]
+	sqlite3_dbdata_init [0x009C4E09+652041]
+	sqlite3_dbdata_init [0x009B97CC+605388]
+	sqlite3_dbdata_init [0x009C5D9B+656027]
+	(No symbol) [0x0079FE6C]
+	(No symbol) [0x007983B8]
+	(No symbol) [0x007984DD]
+	(No symbol) [0x00785818]
+	BaseThreadInitThunk [0x76457BA9+25]
+	RtlInitializeExceptionChain [0x7778BD2B+107]
+	RtlClearBits [0x7778BCAF+191]
+
+2024-01-16 11:23:28,090 - root - ERROR - An error occurred while processing 'Geras gyvenimas' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:443
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 397, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.217)
+Stacktrace:
+	GetHandleVerifier [0x00866EE3+174339]
+	(No symbol) [0x00790A51]
+	(No symbol) [0x004A6FF6]
+	(No symbol) [0x0048EFE7]
+	(No symbol) [0x004FB53B]
+	(No symbol) [0x00509E7B]
+	(No symbol) [0x004F6DA6]
+	(No symbol) [0x004D1034]
+	(No symbol) [0x004D1F8D]
+	GetHandleVerifier [0x00904B1C+820540]
+	sqlite3_dbdata_init [0x009C53EE+653550]
+	sqlite3_dbdata_init [0x009C4E09+652041]
+	sqlite3_dbdata_init [0x009B97CC+605388]
+	sqlite3_dbdata_init [0x009C5D9B+656027]
+	(No symbol) [0x0079FE6C]
+	(No symbol) [0x007983B8]
+	(No symbol) [0x007984DD]
+	(No symbol) [0x00785818]
+	BaseThreadInitThunk [0x76457BA9+25]
+	RtlInitializeExceptionChain [0x7778BD2B+107]
+	RtlClearBits [0x7778BCAF+191]
+
+2024-01-16 11:23:29,101 - root - ERROR - An error occurred while processing 'Filomena' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:443
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 397, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.217)
+Stacktrace:
+	GetHandleVerifier [0x00866EE3+174339]
+	(No symbol) [0x00790A51]
+	(No symbol) [0x004A6FF6]
+	(No symbol) [0x0048EFE7]
+	(No symbol) [0x004FB53B]
+	(No symbol) [0x00509E7B]
+	(No symbol) [0x004F6DA6]
+	(No symbol) [0x004D1034]
+	(No symbol) [0x004D1F8D]
+	GetHandleVerifier [0x00904B1C+820540]
+	sqlite3_dbdata_init [0x009C53EE+653550]
+	sqlite3_dbdata_init [0x009C4E09+652041]
+	sqlite3_dbdata_init [0x009B97CC+605388]
+	sqlite3_dbdata_init [0x009C5D9B+656027]
+	(No symbol) [0x0079FE6C]
+	(No symbol) [0x007983B8]
+	(No symbol) [0x007984DD]
+	(No symbol) [0x00785818]
+	BaseThreadInitThunk [0x76457BA9+25]
+	RtlInitializeExceptionChain [0x7778BD2B+107]
+	RtlClearBits [0x7778BCAF+191]
+
