@@ -36,16 +36,16 @@ def main():
 
     if args.mode == 'demo':
         config['demo']['is_demo'] = True
-        config['databases']['epika'] = config['databases']['epika_demo']
-        config['databases']['mediateka'] = config['databases']['mediateka_demo']
+        config['data']['epika'] = config['data']['epika_demo']
+        config['data']['mediateka'] = config['data']['mediateka_demo']
         config['demo']['default_demo_search_strings_epika'] = args.demo_search_strings_epika
 
     if args.show_browser:
         config['scraping']['show_browser'] = True
 
-    # Initialize both databases
-    initialize_database(config["databases"]["epika"])
-    initialize_database(config["databases"]["mediateka"])
+    # Initialize both data
+    initialize_database(config["data"]["epika"])
+    initialize_database(config["data"]["mediateka"])
 
     # Run graphical user interface
     gui.run_gui()

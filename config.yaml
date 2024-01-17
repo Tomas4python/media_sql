@@ -4,11 +4,11 @@ gui:
   window_size: 1900x800
 
 # Database configurations
-databases:
-  epika: epika_movies.db
-  mediateka: mediateka_movies.db
-  epika_demo: epika_movies_demo.db
-  mediateka_demo: mediateka_demo.db
+data:
+  epika: data/epika_movies.db
+  mediateka: data/mediateka_movies.db
+  epika_demo: temp/epika_movies_demo.db
+  mediateka_demo: temp/mediateka_demo.db
 
 # Scraping settings
 scraping:

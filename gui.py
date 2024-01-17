@@ -34,8 +34,8 @@ def run_gui():
     """Launches the graphical user interface for the application."""
 
     def execute_query(query: str) -> list[tuple]:
-        """Execute a query on the specified databases and return the combined results."""
-        return db_execute_query(query, [config["databases"]["epika"], config["databases"]["mediateka"]])
+        """Execute a query on the specified data and return the combined results."""
+        return db_execute_query(query, [config["data"]["epika"], config["data"]["mediateka"]])
 
     def update_treeview():
         """Updates Treeview with query results"""
@@ -132,27 +132,27 @@ def run_gui():
     def proceed_shallow_scrape_epika() -> None:
         """Perform shallow scrape of epika.lrt.lt"""
         with WebDriverContext() as driver:
-            shallow_scrape_wrapper(driver, config["databases"]["epika"], filename='shallow_scrape_result_epika.csv')
+            shallow_scrape_wrapper(driver, config["data"]["epika"], filename='temp/shallow_scrape_result_epika.csv')
 
     def proceed_deep_scrape_epika() -> None:
         """Perform deep scrape of epika.lrt.lt"""
         with WebDriverContext() as driver:
-            deep_scrape_wrapper(driver, config["databases"]["epika"], shallow_filename='shallow_scrape_result_epika.csv')
+            deep_scrape_wrapper(driver, config["data"]["epika"], shallow_filename='temp/shallow_scrape_result_epika.csv')
 
     def proceed_shallow_scrape_mediateka() -> None:
         """Perform shallow scrape of lrt.lt/tema/filmai"""
         with WebDriverContext() as driver:
-            shallow_scrape_wrapper(driver, config["databases"]["mediateka"], filename='shallow_scrape_result_mediateka.csv')
+            shallow_scrape_wrapper(driver, config["data"]["mediateka"], filename='temp/shallow_scrape_result_mediateka.csv')
 
     def proceed_deep_scrape_mediateka() -> None:
         """Perform deep scrape of lrt.lt/tema/filmai"""
         with WebDriverContext() as driver:
-            deep_scrape_wrapper(driver, config["databases"]["mediateka"], shallow_filename='shallow_scrape_result_mediateka'
+            deep_scrape_wrapper(driver, config["data"]["mediateka"], shallow_filename='temp/shallow_scrape_result_mediateka'
                                                                                     '.csv')
 
     def remove_duplicates_from_databases() -> None:
-        """Checks and removes duplicates from databases"""
-        for database in [config["databases"]["epika"], config["databases"]["mediateka"]]:
+        """Checks and removes duplicates from data"""
+        for database in [config["data"]["epika"], config["data"]["mediateka"]]:
             remove_duplicate_movies(database)
 
     # Main application window
@@ -171,7 +171,7 @@ def run_gui():
     scrape_menu.add_command(label="Deep scrape Epika", command=lambda: proceed_deep_scrape_epika())
     scrape_menu.add_command(label="Shallow scrape Mediateka", command=lambda: proceed_shallow_scrape_mediateka())
     scrape_menu.add_command(label="Deep scrape Mediateka", command=lambda: proceed_deep_scrape_mediateka())
-    scrape_menu.add_command(label="Remove duplicate movies from databases",
+    scrape_menu.add_command(label="Remove duplicate movies from data",
                             command=lambda: remove_duplicates_from_databases())
 
     # Placeholder text for Entry and Combobox

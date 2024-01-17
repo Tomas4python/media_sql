@@ -116,13 +116,14 @@ The application is driven by a Tkinter GUI which consists of three main parts:
 
 ### 1. Menu for Scraping Commands:  
 - **Shallow Scrape Epika/Mediateka:** Scrapes a list of movies from the first or search page and
-saves it to a temporary CSV file.
+saves it to a temporary CSV file (**temp/** directory).
 - **Deep Scrape Epika/Mediateka:** Uses the CSV file to scrape detailed information from individual
 movie pages and stores it in a SQLite3 database. The CSV file is removed after successful deep scrape.
 - *Note:* Shallow and deep scrapes shall be performed independently. Deep scrape will be performed
 if CSV file is created by shallow scrape. You can manually delete or temporarily rename the CSV files
-or databases as needed - they will be created if not found. Deep scraping adds to database only new
-movies by checking URLs against the database. In demo mode the app works with separate demo databases.  
+or databases as needed - they will be created if not found (**temp/** directory). Deep scraping adds
+to database only new movies by checking URLs against the database. In demo mode the app works with
+separate demo databases.  
 
    ![Menu Screenshot](images/menu.png)
 
@@ -140,7 +141,7 @@ delay due to the large database size (over a thousand entries). Results are fetc
    ![Screenshot of the Results Area](images/results.png)
 
 ### Logging
-- **Error Logs:** The application logs errors in an error.log file. This file can be found in the project
+- **Error Logs:** The application logs errors in an error.log file (**log/** directory). This file can be found in the project
 directory and is useful for troubleshooting issues.
 - **Console Logging:** By default, the application streams logs starting from the 'Info' level to the console.
 This includes informational messages, warnings, and errors.

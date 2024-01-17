@@ -114,7 +114,7 @@ def insert_movie(conn: sqlite3.Connection, movie: tuple) -> None:
 
 @loggable
 def execute_query(query: str, databases: list[str]) -> list[tuple]:
-    """Execute a query on both databases and return the combined results."""
+    """Execute a query on both data and return the combined results."""
     results = []
     for database in databases:
         conn = create_connection(database)

@@ -25,7 +25,7 @@ def shallow_scrape_wrapper(driver, database, filename):
         return
 
     # Perform shallow scrape
-    if filename == 'shallow_scrape_result_epika.csv':
+    if filename == 'temp/shallow_scrape_result_epika.csv':
         results = shallow_scrape_epika(driver)
     else:
         results = shallow_scrape_mediateka(driver)
@@ -58,7 +58,7 @@ def deep_scrape_wrapper(driver, database, shallow_filename):
         data_list = [tuple(row) for row in reader]
 
     # Perform deep scrape
-    if shallow_filename == 'shallow_scrape_result_epika.csv':
+    if shallow_filename == 'temp/shallow_scrape_result_epika.csv':
         results = deep_scrape_epika(driver, data_list)
     else:
         results = deep_scrape_mediateka(driver, data_list)
@@ -74,7 +74,7 @@ def deep_scrape_wrapper(driver, database, shallow_filename):
         for movie in results:
             counter += 1
             # Add the current timestamp to date_of_first_finding
-            if shallow_filename == 'shallow_scrape_result_epika.csv':
+            if shallow_filename == 'temp/shallow_scrape_result_epika.csv':
                 movie_with_timestamp = movie + (datetime.now().strftime("%Y-%m-%d %H:%M:%S"), None, None, None, False)
                 insert_movie(conn, movie_with_timestamp)
             else:
