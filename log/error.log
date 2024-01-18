@@ -1178,3 +1178,13 @@ Stacktrace:
 	RtlInitializeExceptionChain [0x7778BD2B+107]
 	RtlClearBits [0x7778BCAF+191]
 
+2024-01-17 18:25:26,770 - db_operations - ERROR - Error executing query on database 'data/epika_movies.db'. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:128
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 124, in execute_query
+    cur.execute(query)
+sqlite3.OperationalError: near "SHOW": syntax error
+2024-01-17 18:25:26,779 - db_operations - ERROR - Error executing query on database 'data/mediateka_movies.db'. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:128
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 124, in execute_query
+    cur.execute(query)
+sqlite3.OperationalError: near "SHOW": syntax error

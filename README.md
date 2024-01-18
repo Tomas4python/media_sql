@@ -130,7 +130,10 @@ separate demo databases.
 ### 2. SQL Query Entry Fields:
 - Two fields are provided for entering SQL queries. The first field contains sample queries, while the
 second is for manual entry. The app will use the sample query from the first field if the second
-field is empty.  
+field is empty.
+- Type of SQL Queries: The 'Execute' query function is designed to handle 'SELECT' queries that retrieve
+data from the SQLite3 databases. It will not properly handle 'UPDATE', 'DELETE', 'INSERT', or other types
+of SQL queries that modify the database, as it's primarily focused on fetching and returning data.
 
    ![Screenshot of the SQL Query Fields](images/sql_query.png)
 
