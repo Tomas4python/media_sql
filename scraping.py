@@ -1,5 +1,6 @@
 # Import libraries
 from selenium import webdriver
+from selenium.webdriver.remote.webelement import WebElement
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
@@ -10,13 +11,12 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.remote.remote_connection import LOGGER
 import logging
 import requests
-from typing import Optional
+from typing import Optional, Any
 import time
 import re
 
 # Import functions and classes from other modules of the app
 from config_loader import Config, LargeStrings
-
 
 # Create a logger
 logger = logging.getLogger(__name__)
@@ -57,7 +57,8 @@ def accept_cookies(driver):
         logger.warning("Cookie consent handling error: %s", e)
 
 
-def load_lazy_content(driver, scroll_step=config["scraping"]["lazy_scroll_step"], wait_time=config["scraping"]["wait_time"]):
+def load_lazy_content(driver, scroll_step=config["scraping"]["lazy_scroll_step"],
+                      wait_time=config["scraping"]["wait_time"]):
     """Scroll epika.lrt.lt page to load lazy content"""
 
     # Get the current scroll position
@@ -125,7 +126,7 @@ def shallow_scrape_epika(driver: webdriver.Chrome) -> list[tuple[str, str, str]]
             load_lazy_content(driver)
 
             # Find all media blocks
-            title_blocks = driver.find_elements(By.CSS_SELECTOR, ".tile--vod.tile")
+            title_blocks: list[WebElement] = driver.find_elements(By.CSS_SELECTOR, ".tile--vod.tile")
             logging.info("Found %s movie title. Extracting...", len(title_blocks))
 
             for i, block in enumerate(title_blocks):
@@ -149,7 +150,7 @@ def shallow_scrape_epika(driver: webdriver.Chrome) -> list[tuple[str, str, str]]
                 except NoSuchElementException as err:
                     logging.warning("Element not found: %s", err)
 
-        except Exception as e:
+        except Exception:
             logging.exception(f"An error occurred while processing '{search_string}'.", search_string)
 
         print(f'\nString: "{search_string}" | Returns: {len(title_blocks)} | Used: {counter_str_used}')
@@ -250,9 +251,12 @@ def click_optional_buttons(driver: webdriver.Chrome):
     """Clicks on lrt.lt/tema/filmai page optional buttons if they appear."""
 
     buttons_to_check = [
-        ("//button[.//span[text()='Man jau yra 7 metai']]", "Clicked 7 years age acceptance button.", "7 years age acceptance button not found."),
-        ("//button[.//span[text()='Man jau yra 14 metų']]", "Clicked 14 years age acceptance button.", "14 years age acceptance button not found."),
-        ("//button[.//span[text()='Man jau yra 18 metų']]", "Clicked 18 years age acceptance button.", "18 years age acceptance button not found."),
+        ("//button[.//span[text()='Man jau yra 7 metai']]", "Clicked 7 years age acceptance button.",
+         "7 years age acceptance button not found."),
+        ("//button[.//span[text()='Man jau yra 14 metų']]", "Clicked 14 years age acceptance button.",
+         "14 years age acceptance button not found."),
+        ("//button[.//span[text()='Man jau yra 18 metų']]", "Clicked 18 years age acceptance button.",
+         "18 years age acceptance button not found."),
         ("//a[text()='Daugiau']", "Clicked 'Load more' button.", "'Load more' button not found.")
     ]
 
@@ -267,7 +271,7 @@ def click_optional_buttons(driver: webdriver.Chrome):
             logging.info(fail_message)
 
 
-def convert_duration_to_minutes(duration_str: str) -> int:
+def convert_duration_to_minutes(duration_str: str) -> int | None | Any:
     """Converts duration strings from lrt.lt/tema/filmai page to minutes"""
 
     parts = duration_str.split(":")
@@ -293,7 +297,7 @@ def shallow_scrape_mediateka(driver: webdriver.Chrome) -> list[tuple[str, str, s
     try:
         # Open the webpage
         driver.get("https://www.lrt.lt/tema/filmai")
-        time.sleep(2) # Allow cookie consent to appear
+        time.sleep(2)  # Allow cookie consent to appear
         decline_cookies(driver)
         logging.info("Starting downloading web content...")
 
@@ -362,7 +366,7 @@ def shallow_scrape_mediateka(driver: webdriver.Chrome) -> list[tuple[str, str, s
         logging.info("Shallow scraping finished.")
         return media_info
 
-    except Exception as e:
+    except Exception:
         logging.exception("An error occurred during scraping")
         return []
 
@@ -409,7 +413,7 @@ def deep_scrape_mediateka(
                                                           "-selection p")
                 description = ' '.join([element.text for element in paragraph_elements])
 
-                # Look in the description if there genre is mentioned
+                # Look in the description if genre is mentioned
                 all_text_lower = description.lower()
                 for genre_candidate in LargeStrings.list_of_genres_mediateka:
                     if genre_candidate in all_text_lower:
@@ -424,7 +428,8 @@ def deep_scrape_mediateka(
                 duration = convert_duration_to_minutes(movie[3])
                 views = int(movie[4]) if movie[4].isdigit() else None
 
-                print(f"Title: {movie[0]} | Description: {description[:20]} | Release year: {release_year} | Genre: {genre} | Duration: {duration} | Views: {views}\n")
+                print(
+                    f"Title: {movie[0]} | Description: {description[:20]} | Release year: {release_year} | Genre: {genre} | Duration: {duration} | Views: {views}\n")
                 # Append the movie data to the list
                 list_of_movie_data.append(
                     (movie[0], image, description, release_year, duration, genre, movie[1], views))
@@ -439,7 +444,7 @@ def deep_scrape_mediateka(
             except Exception as e:
                 logging.info("Element not found extracting description: %s", e)
 
-        except Exception as e:
+        except Exception:
             logging.exception("An error occurred while processing '%s'", movie[0])
 
         time.sleep(1)  # Pause between scraping pages

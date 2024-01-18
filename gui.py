@@ -6,12 +6,13 @@ from PIL import Image, ImageTk
 import io
 import logging
 
+from PIL.ImageTk import PhotoImage
+
 # Import functions and classes from other modules of the app
 from scraping import WebDriverContext
 from file_operations import shallow_scrape_wrapper, deep_scrape_wrapper
 from db_operations import execute_query as db_execute_query, remove_duplicate_movies
 from config_loader import Config, LargeStrings
-
 
 # Create an instance of the Config class
 config = Config().settings
@@ -56,14 +57,13 @@ def run_gui():
                     thumbnail = get_thumbnail(image_blob)
                     if thumbnail:
                         image_references[ind] = thumbnail
-                        row_data = ('',) + row
                         treeview.insert('', 'end', image=thumbnail, values=row)
             except Exception as e:
                 logger.warning("Error executing query: %s", e)
         else:
             logger.info("Please enter a valid SQL query.")
 
-    def get_thumbnail(image_blob) -> ImageTk.PhotoImage:
+    def get_thumbnail(image_blob) -> PhotoImage | None:
         """Convert the image blob to a PhotoImage object and resize."""
         try:
             with Image.open(io.BytesIO(image_blob)) as img:
@@ -137,18 +137,21 @@ def run_gui():
     def proceed_deep_scrape_epika() -> None:
         """Perform deep scrape of epika.lrt.lt"""
         with WebDriverContext() as driver:
-            deep_scrape_wrapper(driver, config["data"]["epika"], shallow_filename='temp/shallow_scrape_result_epika.csv')
+            deep_scrape_wrapper(driver, config["data"]["epika"],
+                                shallow_filename='temp/shallow_scrape_result_epika.csv')
 
     def proceed_shallow_scrape_mediateka() -> None:
         """Perform shallow scrape of lrt.lt/tema/filmai"""
         with WebDriverContext() as driver:
-            shallow_scrape_wrapper(driver, config["data"]["mediateka"], filename='temp/shallow_scrape_result_mediateka.csv')
+            shallow_scrape_wrapper(driver, config["data"]["mediateka"],
+                                   filename='temp/shallow_scrape_result_mediateka.csv')
 
     def proceed_deep_scrape_mediateka() -> None:
         """Perform deep scrape of lrt.lt/tema/filmai"""
         with WebDriverContext() as driver:
-            deep_scrape_wrapper(driver, config["data"]["mediateka"], shallow_filename='temp/shallow_scrape_result_mediateka'
-                                                                                    '.csv')
+            deep_scrape_wrapper(driver, config["data"]["mediateka"], shallow_filename='temp'
+                                                                                      '/shallow_scrape_result_mediateka'
+                                                                                      '.csv')
 
     def remove_duplicates_from_databases() -> None:
         """Checks and removes duplicates from data"""
