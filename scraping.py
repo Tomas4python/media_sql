@@ -153,7 +153,7 @@ def shallow_scrape_epika(driver: webdriver.Chrome) -> list[tuple[str, str, str]]
         except Exception:
             logging.exception(f"An error occurred while processing '{search_string}'.", search_string)
 
-        print(f'\nString: "{search_string}" | Returns: {len(title_blocks)} | Used: {counter_str_used}')
+        print(f'\nString: "{search_string}" | Returns: {len(title_blocks)} | Used: {counter_str_used}\n\n')
         time.sleep(2)  # Make pause between scraping next page
 
     logging.info("Shallow scraping finished.")
