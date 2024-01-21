@@ -1188,3 +1188,147 @@ Traceback (most recent call last):
   File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 124, in execute_query
     cur.execute(query)
 sqlite3.OperationalError: near "SHOW": syntax error
+2024-01-21 18:24:53,470 - root - ERROR - An error occurred while processing 'Auksiniai vyrai' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:449
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 405, in deep_scrape_mediateka
+    click_optional_buttons(driver)
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 268, in click_optional_buttons
+    ).click()
+      ^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="btn btn--tertiary flex-grow-1 mr-xs-10" type="button" data-dismiss="modal">...</button> is not clickable at point (288, 384). Other element would receive the click: <div class="CybotCookiebotDialogBodyBottomWrapper">...</div>
+  (Session info: chrome-headless-shell=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x00486EE3+174339]
+	(No symbol) [0x003B0A51]
+	(No symbol) [0x000C6FF6]
+	(No symbol) [0x000FE48E]
+	(No symbol) [0x000FD09E]
+	(No symbol) [0x000FB5F8]
+	(No symbol) [0x000FAD7F]
+	(No symbol) [0x000F2B4E]
+	(No symbol) [0x0011700C]
+	(No symbol) [0x000F25B0]
+	(No symbol) [0x00117414]
+	(No symbol) [0x0012A104]
+	(No symbol) [0x00116DA6]
+	(No symbol) [0x000F1034]
+	(No symbol) [0x000F1F8D]
+	GetHandleVerifier [0x00524B1C+820540]
+	sqlite3_dbdata_init [0x005E53EE+653550]
+	sqlite3_dbdata_init [0x005E4E09+652041]
+	sqlite3_dbdata_init [0x005D97CC+605388]
+	sqlite3_dbdata_init [0x005E5D9B+656027]
+	(No symbol) [0x003BFE6C]
+	(No symbol) [0x003B83B8]
+	(No symbol) [0x003B84DD]
+	(No symbol) [0x003A5818]
+	BaseThreadInitThunk [0x76327BA9+25]
+	RtlInitializeExceptionChain [0x7708BD2B+107]
+	RtlClearBits [0x7708BCAF+191]
+	(No symbol) [0x00000000]
+
+2024-01-21 18:25:03,243 - root - ERROR - An error occurred while processing 'Naujienos iš Marso planetos' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:449
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 405, in deep_scrape_mediateka
+    click_optional_buttons(driver)
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 268, in click_optional_buttons
+    ).click()
+      ^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="btn btn--tertiary flex-grow-1 mr-xs-10" type="button" data-dismiss="modal">...</button> is not clickable at point (288, 384). Other element would receive the click: <div class="CybotCookiebotDialogBodyBottomWrapper">...</div>
+  (Session info: chrome-headless-shell=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x00486EE3+174339]
+	(No symbol) [0x003B0A51]
+	(No symbol) [0x000C6FF6]
+	(No symbol) [0x000FE48E]
+	(No symbol) [0x000FD09E]
+	(No symbol) [0x000FB5F8]
+	(No symbol) [0x000FAD7F]
+	(No symbol) [0x000F2B4E]
+	(No symbol) [0x0011700C]
+	(No symbol) [0x000F25B0]
+	(No symbol) [0x00117414]
+	(No symbol) [0x0012A104]
+	(No symbol) [0x00116DA6]
+	(No symbol) [0x000F1034]
+	(No symbol) [0x000F1F8D]
+	GetHandleVerifier [0x00524B1C+820540]
+	sqlite3_dbdata_init [0x005E53EE+653550]
+	sqlite3_dbdata_init [0x005E4E09+652041]
+	sqlite3_dbdata_init [0x005D97CC+605388]
+	sqlite3_dbdata_init [0x005E5D9B+656027]
+	(No symbol) [0x003BFE6C]
+	(No symbol) [0x003B83B8]
+	(No symbol) [0x003B84DD]
+	(No symbol) [0x003A5818]
+	BaseThreadInitThunk [0x76327BA9+25]
+	RtlInitializeExceptionChain [0x7708BD2B+107]
+	RtlClearBits [0x7708BCAF+191]
+	(No symbol) [0x00000000]
+
+2024-01-21 18:25:08,436 - root - ERROR - An error occurred while processing 'Gyvenimas po mirties' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:449
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 405, in deep_scrape_mediateka
+    click_optional_buttons(driver)
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 268, in click_optional_buttons
+    ).click()
+      ^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="btn btn--tertiary flex-grow-1 mr-xs-10" type="button" data-dismiss="modal">...</button> is not clickable at point (288, 384). Other element would receive the click: <div class="CybotCookiebotDialogBodyBottomWrapper">...</div>
+  (Session info: chrome-headless-shell=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x00486EE3+174339]
+	(No symbol) [0x003B0A51]
+	(No symbol) [0x000C6FF6]
+	(No symbol) [0x000FE48E]
+	(No symbol) [0x000FD09E]
+	(No symbol) [0x000FB5F8]
+	(No symbol) [0x000FAD7F]
+	(No symbol) [0x000F2B4E]
+	(No symbol) [0x0011700C]
+	(No symbol) [0x000F25B0]
+	(No symbol) [0x00117414]
+	(No symbol) [0x0012A104]
+	(No symbol) [0x00116DA6]
+	(No symbol) [0x000F1034]
+	(No symbol) [0x000F1F8D]
+	GetHandleVerifier [0x00524B1C+820540]
+	sqlite3_dbdata_init [0x005E53EE+653550]
+	sqlite3_dbdata_init [0x005E4E09+652041]
+	sqlite3_dbdata_init [0x005D97CC+605388]
+	sqlite3_dbdata_init [0x005E5D9B+656027]
+	(No symbol) [0x003BFE6C]
+	(No symbol) [0x003B83B8]
+	(No symbol) [0x003B84DD]
+	(No symbol) [0x003A5818]
+	BaseThreadInitThunk [0x76327BA9+25]
+	RtlInitializeExceptionChain [0x7708BD2B+107]
+	RtlClearBits [0x7708BCAF+191]
+	(No symbol) [0x00000000]
+

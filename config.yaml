@@ -14,7 +14,7 @@ data:
 scraping:
   show_browser: false
   lazy_scroll_step: 500
-  wait_time: 0.5  # Time between scrolling steps
+  wait_time: 1  # Time between scrolling steps in sec
 
 # Demo mode configurations
 demo:

@@ -133,13 +133,16 @@ second is for manual entry. The app will use the sample query from the first fie
 field is empty.
 - Type of SQL Queries: The 'Execute' query function is designed to handle 'SELECT' queries that retrieve
 data from the SQLite3 databases. It will not properly handle 'UPDATE', 'DELETE', 'INSERT', or other types
-of SQL queries that modify the database, as it's primarily focused on fetching and returning data.
+of SQL queries that modify the database, as it's primarily focused on fetching and returning data. Please
+ensure that your queries are designed to return complete rows from the database. Queries that do not
+retrieve full rows may result in inadequately displayed results in the interface.
 
    ![Screenshot of the SQL Query Fields](images/sql_query.png)
 
 ### 3. Results Area:  
 - Displays a table of results based on the executed SQL query. For broad queries there might be a
-delay due to the large database size (over a thousand entries). Results are fetched from both databases.
+delay due to the large database size (over a two thousand entries). Results are fetched from both
+databases.
  
    ![Screenshot of the Results Area](images/results.png)
 

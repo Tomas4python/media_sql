@@ -299,22 +299,23 @@ def shallow_scrape_mediateka(driver: webdriver.Chrome) -> list[tuple[str, str, s
         driver.get("https://www.lrt.lt/tema/filmai")
         time.sleep(2)  # Allow cookie consent to appear
         decline_cookies(driver)
+        time.sleep(1)  # Wait for the page to load more content
         logging.info("Starting downloading web content...")
 
         i = 0
         while True:
             try:
+                # Easy scroll the page to the bottom to download its content
+                time.sleep(1)  # Wait for the page to load more content
+                load_lazy_content(driver)
                 # Find and click the "Load More" button
                 load_more_button = driver.find_element(By.XPATH, '//a[@class="btn btn--lg section__button"]')
                 load_more_button.click()
-                logging.info(f"Load more button clicked {i} times")
-                # Easy scroll the page to the bottom to download its content
-                load_lazy_content(driver)
                 i += 1
+                logging.info(f"Load more button clicked {i} times")
                 # Don't scrape entire page if app is in demo mode
                 if config["demo"]["is_demo"] and i == config["demo"]["num_demo_pages_mediateka"]:
                     break
-                time.sleep(2)  # Wait for the page to load more content
 
             except (NoSuchElementException, ElementNotInteractableException):
                 logging.info("No more 'Load more' buttons.")
@@ -388,7 +389,7 @@ def deep_scrape_mediateka(
 
     # Open web page for the first time and accept the cookies
     driver.get("https://www.lrt.lt/tema/filmai")
-    time.sleep(3)  # Allow cookie consent to download
+    time.sleep(4)  # Allow cookie consent to download
     decline_cookies(driver)
 
     # Initialize the list of movie data for return as function result

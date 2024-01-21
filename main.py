@@ -43,7 +43,7 @@ def main():
     if args.show_browser:
         config['scraping']['show_browser'] = True
 
-    # Initialize both data
+    # Initialize both databases
     initialize_database(config["data"]["epika"])
     initialize_database(config["data"]["mediateka"])
 
