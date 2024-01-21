@@ -34,7 +34,7 @@ Follow these steps to set up the application locally:
 1. Ensure you have Python 3.11 installed on your system. You can download it from
 [Python's official website](https://www.python.org/downloads/).
 1. Download the project from its [GitHub repository](https://github.com/Tomas4python/media_sql)
-and extract it into for project created new folder or alternatively:
+and extract it into for project created new folder or alternatively if you are GIT user:
    - Open **Command Prompt** or **PowerShell** on your Windows system.
    - Navigate to the project folder using the '**cd**' command. For example:
    ```
