@@ -34,7 +34,17 @@ Follow these steps to set up the application locally:
 1. Ensure you have Python 3.11 installed on your system. You can download it from
 [Python's official website](https://www.python.org/downloads/).
 1. Download the project from its [GitHub repository](https://github.com/Tomas4python/media_sql)
-and extract it into for project created new folder.
+and extract it into for project created new folder or alternatively:
+   - Open **Command Prompt** or **PowerShell** on your Windows system.
+   - Navigate to the project folder using the '**cd**' command. For example:
+   ```
+   cd path\to\project\folder
+   ``` 
+   - clone the entire project into project folder by running the script:
+   ```
+   git clone "https://github.com/Tomas4python/media_sql.git"
+   ```
+   
 1. Optional: Set Up a Virtual Environment:
    - It's recommended to use a virtual environment to avoid conflicts with
    other Python projects or system-wide packages.
@@ -79,7 +89,7 @@ and testing this project.
 
 ### Standard Launch:
 
-Navigate to the project folder and activate venf if created. 
+Navigate to the project folder and activate venv if created (Step 3 of 'Installation Instructions'). 
 Run the application by executing:
 ```
 python main.py
