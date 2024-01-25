@@ -39,6 +39,8 @@ class WebDriverContext:
         # Set up WebDriver
         service = Service(ChromeDriverManager().install())
         self.driver = webdriver.Chrome(service=service, options=chrome_options)
+        # Set window size
+        self.driver.set_window_size(1900, 1060)
         return self.driver
 
     def __exit__(self, exc_type, exc_val, exc_tb) -> None:
@@ -235,19 +237,27 @@ def deep_scrape_epika(driver: webdriver.Chrome, list_of_movies: list[tuple[str, 
     return list_of_movie_data
 
 
-def decline_cookies(driver):
-    """Clicks cookie acceptance dialog button for lrt.lt/tema/filmai"""
-
+def accept_cookies_mediateka(driver: webdriver.Chrome) -> None:
+    """Accepts cookies on lrt.lt/tema/filmai page if the consent dialog appears."""
     try:
-        wait = WebDriverWait(driver, 10)  # Increased timeout
-        wait.until(EC.presence_of_element_located((By.ID, "CybotCookiebotDialogBodyButtonDecline")))
-        wait.until(EC.element_to_be_clickable((By.ID, "CybotCookiebotDialogBodyButtonDecline"))).click()
-        logging.info("Clicked cookie decline button.")
+        wait = WebDriverWait(driver, 5)
+        # Check if the consent dialog is present
+        consent_dialog_present = wait.until(
+            EC.presence_of_element_located((By.ID, "CybotCookiebotDialogFooter"))
+        )
+        if consent_dialog_present:
+            accept_button = wait.until(
+                EC.element_to_be_clickable((By.ID, "CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll"))
+            )
+            accept_button.click()
+            logging.info("Clicked 'Allow all cookies' button.")
+    except TimeoutException:
+        logging.info("No cookie consent dialog found.")
     except Exception as e:
-        logging.warning("Cookie consent handling error: %s", e)
+        logging.warning(f"Error accepting cookies: {e}")
 
 
-def click_optional_buttons(driver: webdriver.Chrome):
+def click_optional_buttons(driver: webdriver.Chrome, ind: int):
     """Clicks on lrt.lt/tema/filmai page optional buttons if they appear."""
 
     buttons_to_check = [
@@ -260,10 +270,13 @@ def click_optional_buttons(driver: webdriver.Chrome):
         ("//a[text()='Daugiau']", "Clicked 'Load more' button.", "'Load more' button not found.")
     ]
 
+    if ind < 3:
+        accept_cookies_mediateka(driver)
     for xpath, success_message, fail_message in buttons_to_check:
+
         try:
             if driver.find_elements(By.XPATH, xpath):
-                WebDriverWait(driver, 3).until(
+                WebDriverWait(driver, 10).until(
                     EC.element_to_be_clickable((By.XPATH, xpath))
                 ).click()
                 logging.info(success_message)
@@ -297,8 +310,8 @@ def shallow_scrape_mediateka(driver: webdriver.Chrome) -> list[tuple[str, str, s
     try:
         # Open the webpage
         driver.get("https://www.lrt.lt/tema/filmai")
-        time.sleep(2)  # Allow cookie consent to appear
-        decline_cookies(driver)
+        time.sleep(4)  # Allow cookie consent to appear
+        accept_cookies_mediateka(driver)
         time.sleep(1)  # Wait for the page to load more content
         logging.info("Starting downloading web content...")
 
@@ -390,7 +403,7 @@ def deep_scrape_mediateka(
     # Open web page for the first time and accept the cookies
     driver.get("https://www.lrt.lt/tema/filmai")
     time.sleep(4)  # Allow cookie consent to download
-    decline_cookies(driver)
+    accept_cookies_mediateka(driver)
 
     # Initialize the list of movie data for return as function result
     # Tuple structure: <title, image, description, release year, duration, genre, page url, views>
@@ -402,7 +415,8 @@ def deep_scrape_mediateka(
             driver.get(f"{movie[1]}")
             time.sleep(2)  # Allow the page to load
             driver.execute_script(pause_video_script)
-            click_optional_buttons(driver)
+            time.sleep(1)
+            click_optional_buttons(driver, ind)
 
             # Initialize variables
             description = genre = image = duration = views = None

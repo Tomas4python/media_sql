@@ -110,7 +110,7 @@ main    </h1>
 </span><span id="L-43"><a href="#L-43"><span class="linenos">43</span></a>    <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">show_browser</span><span class="p">:</span>
 </span><span id="L-44"><a href="#L-44"><span class="linenos">44</span></a>        <span class="n">config</span><span class="p">[</span><span class="s1">&#39;scraping&#39;</span><span class="p">][</span><span class="s1">&#39;show_browser&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
 </span><span id="L-45"><a href="#L-45"><span class="linenos">45</span></a>
-</span><span id="L-46"><a href="#L-46"><span class="linenos">46</span></a>    <span class="c1"># Initialize both data</span>
+</span><span id="L-46"><a href="#L-46"><span class="linenos">46</span></a>    <span class="c1"># Initialize both databases</span>
 </span><span id="L-47"><a href="#L-47"><span class="linenos">47</span></a>    <span class="n">initialize_database</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">][</span><span class="s2">&quot;epika&quot;</span><span class="p">])</span>
 </span><span id="L-48"><a href="#L-48"><span class="linenos">48</span></a>    <span class="n">initialize_database</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">][</span><span class="s2">&quot;mediateka&quot;</span><span class="p">])</span>
 </span><span id="L-49"><a href="#L-49"><span class="linenos">49</span></a>
@@ -139,7 +139,7 @@ main    </h1>
                     <div class="attr variable">
             <span class="name">config</span>        =
 <input id="config-view-value" class="view-value-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
-            <label class="view-value-button pdoc-button" for="config-view-value"></label><span class="default_value">{&#39;gui&#39;: {&#39;app_description&#39;: &#39;CAAI Project 1 - Scraping/SQLite3 Application - scrape Epika LRT and Mediateka LRT&#39;, &#39;window_size&#39;: &#39;1900x800&#39;}, &#39;data&#39;: {&#39;epika&#39;: &#39;data/epika_movies.db&#39;, &#39;mediateka&#39;: &#39;data/mediateka_movies.db&#39;, &#39;epika_demo&#39;: &#39;temp/epika_movies_demo.db&#39;, &#39;mediateka_demo&#39;: &#39;temp/mediateka_demo.db&#39;}, &#39;scraping&#39;: {&#39;show_browser&#39;: False, &#39;lazy_scroll_step&#39;: 500, &#39;wait_time&#39;: 0.5}, &#39;demo&#39;: {&#39;is_demo&#39;: False, &#39;default_demo_search_strings_epika&#39;: [&#39;komedija&#39;, &#39;nuotykiu&#39;], &#39;num_demo_pages_mediateka&#39;: 2}}</span>
+            <label class="view-value-button pdoc-button" for="config-view-value"></label><span class="default_value">{&#39;gui&#39;: {&#39;app_description&#39;: &#39;CAAI Project 1 - Scraping/SQLite3 Application - scrape Epika LRT and Mediateka LRT&#39;, &#39;window_size&#39;: &#39;1900x800&#39;}, &#39;data&#39;: {&#39;epika&#39;: &#39;data/epika_movies.db&#39;, &#39;mediateka&#39;: &#39;data/mediateka_movies.db&#39;, &#39;epika_demo&#39;: &#39;temp/epika_movies_demo.db&#39;, &#39;mediateka_demo&#39;: &#39;temp/mediateka_demo.db&#39;}, &#39;scraping&#39;: {&#39;show_browser&#39;: False, &#39;lazy_scroll_step&#39;: 500, &#39;wait_time&#39;: 1}, &#39;demo&#39;: {&#39;is_demo&#39;: False, &#39;default_demo_search_strings_epika&#39;: [&#39;komedija&#39;, &#39;nuotykiu&#39;], &#39;num_demo_pages_mediateka&#39;: 2}}</span>
 
         
     </div>
@@ -198,7 +198,7 @@ main    </h1>
 </span><span id="main-44"><a href="#main-44"><span class="linenos">44</span></a>    <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">show_browser</span><span class="p">:</span>
 </span><span id="main-45"><a href="#main-45"><span class="linenos">45</span></a>        <span class="n">config</span><span class="p">[</span><span class="s1">&#39;scraping&#39;</span><span class="p">][</span><span class="s1">&#39;show_browser&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
 </span><span id="main-46"><a href="#main-46"><span class="linenos">46</span></a>
-</span><span id="main-47"><a href="#main-47"><span class="linenos">47</span></a>    <span class="c1"># Initialize both data</span>
+</span><span id="main-47"><a href="#main-47"><span class="linenos">47</span></a>    <span class="c1"># Initialize both databases</span>
 </span><span id="main-48"><a href="#main-48"><span class="linenos">48</span></a>    <span class="n">initialize_database</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">][</span><span class="s2">&quot;epika&quot;</span><span class="p">])</span>
 </span><span id="main-49"><a href="#main-49"><span class="linenos">49</span></a>    <span class="n">initialize_database</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">][</span><span class="s2">&quot;mediateka&quot;</span><span class="p">])</span>
 </span><span id="main-50"><a href="#main-50"><span class="linenos">50</span></a>

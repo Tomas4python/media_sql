@@ -151,7 +151,7 @@ retrieve full rows may result in inadequately displayed results in the interface
 
 ### 3. Results Area:  
 - Displays a table of results based on the executed SQL query. For broad queries there might be a
-delay due to the large database size (over a two thousand entries). Results are fetched from both
+delay due to the large database size (up to one and a half thousand). Results are fetched from both
 databases.
  
    ![Screenshot of the Results Area](images/results.png)

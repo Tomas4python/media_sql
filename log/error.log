@@ -1332,3 +1332,3265 @@ Stacktrace:
 	RtlClearBits [0x7708BCAF+191]
 	(No symbol) [0x00000000]
 
+2024-01-24 21:46:08,319 - root - ERROR - An error occurred while processing 'Likime draugais' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:449
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 405, in deep_scrape_mediateka
+    click_optional_buttons(driver)
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 268, in click_optional_buttons
+    ).click()
+      ^^^^^^^
+  File "C:\Users\tomui\AppData\Roaming\Python\Python311\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\tomui\AppData\Roaming\Python\Python311\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\AppData\Roaming\Python\Python311\site-packages\selenium\webdriver\remote\webdriver.py", line 346, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\AppData\Roaming\Python\Python311\site-packages\selenium\webdriver\remote\errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="btn btn--tertiary flex-grow-1 mr-xs-10" type="button" data-dismiss="modal">...</button> is not clickable at point (288, 384). Other element would receive the click: <div class="CybotCookiebotDialogBodyBottomWrapper">...</div>
+  (Session info: chrome-headless-shell=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x00BC6EE3+174339]
+	(No symbol) [0x00AF0A51]
+	(No symbol) [0x00806FF6]
+	(No symbol) [0x0083E48E]
+	(No symbol) [0x0083D09E]
+	(No symbol) [0x0083B5F8]
+	(No symbol) [0x0083AD7F]
+	(No symbol) [0x00832B4E]
+	(No symbol) [0x0085700C]
+	(No symbol) [0x008325B0]
+	(No symbol) [0x00857414]
+	(No symbol) [0x0086A104]
+	(No symbol) [0x00856DA6]
+	(No symbol) [0x00831034]
+	(No symbol) [0x00831F8D]
+	GetHandleVerifier [0x00C64B1C+820540]
+	sqlite3_dbdata_init [0x00D253EE+653550]
+	sqlite3_dbdata_init [0x00D24E09+652041]
+	sqlite3_dbdata_init [0x00D197CC+605388]
+	sqlite3_dbdata_init [0x00D25D9B+656027]
+	(No symbol) [0x00AFFE6C]
+	(No symbol) [0x00AF83B8]
+	(No symbol) [0x00AF84DD]
+	(No symbol) [0x00AE5818]
+	BaseThreadInitThunk [0x76327BA9+25]
+	RtlInitializeExceptionChain [0x7708BD2B+107]
+	RtlClearBits [0x7708BCAF+191]
+
+2024-01-24 21:47:22,152 - root - ERROR - An error occurred while processing 'Likime draugais' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:449
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 405, in deep_scrape_mediateka
+    click_optional_buttons(driver)
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 268, in click_optional_buttons
+    ).click()
+      ^^^^^^^
+  File "C:\Users\tomui\AppData\Roaming\Python\Python311\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\tomui\AppData\Roaming\Python\Python311\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\AppData\Roaming\Python\Python311\site-packages\selenium\webdriver\remote\webdriver.py", line 346, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\AppData\Roaming\Python\Python311\site-packages\selenium\webdriver\remote\errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="btn btn--tertiary flex-grow-1 mr-xs-10" type="button" data-dismiss="modal">...</button> is not clickable at point (288, 384). Other element would receive the click: <div class="CybotCookiebotDialogBodyBottomWrapper">...</div>
+  (Session info: chrome-headless-shell=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x01286EE3+174339]
+	(No symbol) [0x011B0A51]
+	(No symbol) [0x00EC6FF6]
+	(No symbol) [0x00EFE48E]
+	(No symbol) [0x00EFD09E]
+	(No symbol) [0x00EFB5F8]
+	(No symbol) [0x00EFAD7F]
+	(No symbol) [0x00EF2B4E]
+	(No symbol) [0x00F1700C]
+	(No symbol) [0x00EF25B0]
+	(No symbol) [0x00F17414]
+	(No symbol) [0x00F2A104]
+	(No symbol) [0x00F16DA6]
+	(No symbol) [0x00EF1034]
+	(No symbol) [0x00EF1F8D]
+	GetHandleVerifier [0x01324B1C+820540]
+	sqlite3_dbdata_init [0x013E53EE+653550]
+	sqlite3_dbdata_init [0x013E4E09+652041]
+	sqlite3_dbdata_init [0x013D97CC+605388]
+	sqlite3_dbdata_init [0x013E5D9B+656027]
+	(No symbol) [0x011BFE6C]
+	(No symbol) [0x011B83B8]
+	(No symbol) [0x011B84DD]
+	(No symbol) [0x011A5818]
+	BaseThreadInitThunk [0x76327BA9+25]
+	RtlInitializeExceptionChain [0x7708BD2B+107]
+	RtlClearBits [0x7708BCAF+191]
+
+2024-01-24 21:47:32,071 - root - ERROR - An error occurred while processing 'Sausis' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:449
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 405, in deep_scrape_mediateka
+    click_optional_buttons(driver)
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 268, in click_optional_buttons
+    ).click()
+      ^^^^^^^
+  File "C:\Users\tomui\AppData\Roaming\Python\Python311\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\tomui\AppData\Roaming\Python\Python311\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\AppData\Roaming\Python\Python311\site-packages\selenium\webdriver\remote\webdriver.py", line 346, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\AppData\Roaming\Python\Python311\site-packages\selenium\webdriver\remote\errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="btn btn--tertiary flex-grow-1 mr-xs-10" type="button" data-dismiss="modal">...</button> is not clickable at point (288, 384). Other element would receive the click: <div class="CybotCookiebotDialogBodyBottomWrapper">...</div>
+  (Session info: chrome-headless-shell=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x01286EE3+174339]
+	(No symbol) [0x011B0A51]
+	(No symbol) [0x00EC6FF6]
+	(No symbol) [0x00EFE48E]
+	(No symbol) [0x00EFD09E]
+	(No symbol) [0x00EFB5F8]
+	(No symbol) [0x00EFAD7F]
+	(No symbol) [0x00EF2B4E]
+	(No symbol) [0x00F1700C]
+	(No symbol) [0x00EF25B0]
+	(No symbol) [0x00F17414]
+	(No symbol) [0x00F2A104]
+	(No symbol) [0x00F16DA6]
+	(No symbol) [0x00EF1034]
+	(No symbol) [0x00EF1F8D]
+	GetHandleVerifier [0x01324B1C+820540]
+	sqlite3_dbdata_init [0x013E53EE+653550]
+	sqlite3_dbdata_init [0x013E4E09+652041]
+	sqlite3_dbdata_init [0x013D97CC+605388]
+	sqlite3_dbdata_init [0x013E5D9B+656027]
+	(No symbol) [0x011BFE6C]
+	(No symbol) [0x011B83B8]
+	(No symbol) [0x011B84DD]
+	(No symbol) [0x011A5818]
+	BaseThreadInitThunk [0x76327BA9+25]
+	RtlInitializeExceptionChain [0x7708BD2B+107]
+	RtlClearBits [0x7708BCAF+191]
+
+2024-01-24 21:47:41,576 - root - ERROR - An error occurred while processing 'Auksiniai vyrai' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:449
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 405, in deep_scrape_mediateka
+    click_optional_buttons(driver)
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 268, in click_optional_buttons
+    ).click()
+      ^^^^^^^
+  File "C:\Users\tomui\AppData\Roaming\Python\Python311\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\tomui\AppData\Roaming\Python\Python311\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\AppData\Roaming\Python\Python311\site-packages\selenium\webdriver\remote\webdriver.py", line 346, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\AppData\Roaming\Python\Python311\site-packages\selenium\webdriver\remote\errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="btn btn--tertiary flex-grow-1 mr-xs-10" type="button" data-dismiss="modal">...</button> is not clickable at point (288, 384). Other element would receive the click: <div class="CybotCookiebotDialogBodyBottomWrapper">...</div>
+  (Session info: chrome-headless-shell=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x01286EE3+174339]
+	(No symbol) [0x011B0A51]
+	(No symbol) [0x00EC6FF6]
+	(No symbol) [0x00EFE48E]
+	(No symbol) [0x00EFD09E]
+	(No symbol) [0x00EFB5F8]
+	(No symbol) [0x00EFAD7F]
+	(No symbol) [0x00EF2B4E]
+	(No symbol) [0x00F1700C]
+	(No symbol) [0x00EF25B0]
+	(No symbol) [0x00F17414]
+	(No symbol) [0x00F2A104]
+	(No symbol) [0x00F16DA6]
+	(No symbol) [0x00EF1034]
+	(No symbol) [0x00EF1F8D]
+	GetHandleVerifier [0x01324B1C+820540]
+	sqlite3_dbdata_init [0x013E53EE+653550]
+	sqlite3_dbdata_init [0x013E4E09+652041]
+	sqlite3_dbdata_init [0x013D97CC+605388]
+	sqlite3_dbdata_init [0x013E5D9B+656027]
+	(No symbol) [0x011BFE6C]
+	(No symbol) [0x011B83B8]
+	(No symbol) [0x011B84DD]
+	(No symbol) [0x011A5818]
+	BaseThreadInitThunk [0x76327BA9+25]
+	RtlInitializeExceptionChain [0x7708BD2B+107]
+	RtlClearBits [0x7708BCAF+191]
+
+2024-01-24 21:47:46,634 - root - ERROR - An error occurred while processing 'Įsimylėję gyvenimą' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:449
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 405, in deep_scrape_mediateka
+    click_optional_buttons(driver)
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 268, in click_optional_buttons
+    ).click()
+      ^^^^^^^
+  File "C:\Users\tomui\AppData\Roaming\Python\Python311\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\tomui\AppData\Roaming\Python\Python311\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\AppData\Roaming\Python\Python311\site-packages\selenium\webdriver\remote\webdriver.py", line 346, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\AppData\Roaming\Python\Python311\site-packages\selenium\webdriver\remote\errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="btn btn--tertiary flex-grow-1 mr-xs-10" type="button" data-dismiss="modal">...</button> is not clickable at point (288, 384). Other element would receive the click: <div class="CybotCookiebotDialogBodyBottomWrapper">...</div>
+  (Session info: chrome-headless-shell=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x01286EE3+174339]
+	(No symbol) [0x011B0A51]
+	(No symbol) [0x00EC6FF6]
+	(No symbol) [0x00EFE48E]
+	(No symbol) [0x00EFD09E]
+	(No symbol) [0x00EFB5F8]
+	(No symbol) [0x00EFAD7F]
+	(No symbol) [0x00EF2B4E]
+	(No symbol) [0x00F1700C]
+	(No symbol) [0x00EF25B0]
+	(No symbol) [0x00F17414]
+	(No symbol) [0x00F2A104]
+	(No symbol) [0x00F16DA6]
+	(No symbol) [0x00EF1034]
+	(No symbol) [0x00EF1F8D]
+	GetHandleVerifier [0x01324B1C+820540]
+	sqlite3_dbdata_init [0x013E53EE+653550]
+	sqlite3_dbdata_init [0x013E4E09+652041]
+	sqlite3_dbdata_init [0x013D97CC+605388]
+	sqlite3_dbdata_init [0x013E5D9B+656027]
+	(No symbol) [0x011BFE6C]
+	(No symbol) [0x011B83B8]
+	(No symbol) [0x011B84DD]
+	(No symbol) [0x011A5818]
+	BaseThreadInitThunk [0x76327BA9+25]
+	RtlInitializeExceptionChain [0x7708BD2B+107]
+	RtlClearBits [0x7708BCAF+191]
+
+2024-01-25 10:17:25,842 - root - ERROR - An error occurred during scraping - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:373
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 312, in shallow_scrape_mediateka
+    load_lazy_content(driver)
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 81, in load_lazy_content
+    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 408, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:22:45,480 - db_operations - ERROR - Error checking if movie exists. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:100
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 97, in movie_exists
+    cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
+sqlite3.OperationalError: no such table: movies
+2024-01-25 10:22:45,484 - db_operations - ERROR - Error checking if movie exists. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:100
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 97, in movie_exists
+    cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
+sqlite3.OperationalError: no such table: movies
+2024-01-25 10:22:45,485 - db_operations - ERROR - Error checking if movie exists. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:100
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 97, in movie_exists
+    cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
+sqlite3.OperationalError: no such table: movies
+2024-01-25 10:22:45,486 - db_operations - ERROR - Error checking if movie exists. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:100
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 97, in movie_exists
+    cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
+sqlite3.OperationalError: no such table: movies
+2024-01-25 10:22:45,486 - db_operations - ERROR - Error checking if movie exists. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:100
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 97, in movie_exists
+    cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
+sqlite3.OperationalError: no such table: movies
+2024-01-25 10:22:45,487 - db_operations - ERROR - Error checking if movie exists. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:100
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 97, in movie_exists
+    cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
+sqlite3.OperationalError: no such table: movies
+2024-01-25 10:22:45,488 - db_operations - ERROR - Error checking if movie exists. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:100
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 97, in movie_exists
+    cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
+sqlite3.OperationalError: no such table: movies
+2024-01-25 10:22:45,488 - db_operations - ERROR - Error checking if movie exists. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:100
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 97, in movie_exists
+    cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
+sqlite3.OperationalError: no such table: movies
+2024-01-25 10:22:45,488 - db_operations - ERROR - Error checking if movie exists. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:100
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 97, in movie_exists
+    cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
+sqlite3.OperationalError: no such table: movies
+2024-01-25 10:22:45,489 - db_operations - ERROR - Error checking if movie exists. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:100
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 97, in movie_exists
+    cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
+sqlite3.OperationalError: no such table: movies
+2024-01-25 10:22:45,489 - db_operations - ERROR - Error checking if movie exists. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:100
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 97, in movie_exists
+    cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
+sqlite3.OperationalError: no such table: movies
+2024-01-25 10:22:45,490 - db_operations - ERROR - Error checking if movie exists. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:100
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 97, in movie_exists
+    cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
+sqlite3.OperationalError: no such table: movies
+2024-01-25 10:22:45,490 - db_operations - ERROR - Error checking if movie exists. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:100
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 97, in movie_exists
+    cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
+sqlite3.OperationalError: no such table: movies
+2024-01-25 10:22:45,491 - db_operations - ERROR - Error checking if movie exists. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:100
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 97, in movie_exists
+    cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
+sqlite3.OperationalError: no such table: movies
+2024-01-25 10:22:45,491 - db_operations - ERROR - Error checking if movie exists. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:100
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 97, in movie_exists
+    cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
+sqlite3.OperationalError: no such table: movies
+2024-01-25 10:22:45,491 - db_operations - ERROR - Error checking if movie exists. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:100
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 97, in movie_exists
+    cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
+sqlite3.OperationalError: no such table: movies
+2024-01-25 10:22:45,492 - db_operations - ERROR - Error checking if movie exists. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:100
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 97, in movie_exists
+    cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
+sqlite3.OperationalError: no such table: movies
+2024-01-25 10:22:45,492 - db_operations - ERROR - Error checking if movie exists. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:100
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 97, in movie_exists
+    cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
+sqlite3.OperationalError: no such table: movies
+2024-01-25 10:22:45,494 - db_operations - ERROR - Error checking if movie exists. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:100
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 97, in movie_exists
+    cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
+sqlite3.OperationalError: no such table: movies
+2024-01-25 10:22:45,494 - db_operations - ERROR - Error checking if movie exists. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:100
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 97, in movie_exists
+    cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
+sqlite3.OperationalError: no such table: movies
+2024-01-25 10:22:45,495 - db_operations - ERROR - Error checking if movie exists. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:100
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 97, in movie_exists
+    cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
+sqlite3.OperationalError: no such table: movies
+2024-01-25 10:22:45,496 - db_operations - ERROR - Error checking if movie exists. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:100
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 97, in movie_exists
+    cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
+sqlite3.OperationalError: no such table: movies
+2024-01-25 10:22:45,496 - db_operations - ERROR - Error checking if movie exists. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:100
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 97, in movie_exists
+    cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
+sqlite3.OperationalError: no such table: movies
+2024-01-25 10:22:45,497 - db_operations - ERROR - Error checking if movie exists. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:100
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 97, in movie_exists
+    cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
+sqlite3.OperationalError: no such table: movies
+2024-01-25 10:22:45,498 - db_operations - ERROR - Error checking if movie exists. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:100
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 97, in movie_exists
+    cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
+sqlite3.OperationalError: no such table: movies
+2024-01-25 10:22:45,498 - db_operations - ERROR - Error checking if movie exists. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:100
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 97, in movie_exists
+    cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
+sqlite3.OperationalError: no such table: movies
+2024-01-25 10:22:45,498 - db_operations - ERROR - Error checking if movie exists. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:100
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 97, in movie_exists
+    cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
+sqlite3.OperationalError: no such table: movies
+2024-01-25 10:22:45,499 - db_operations - ERROR - Error checking if movie exists. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:100
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 97, in movie_exists
+    cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
+sqlite3.OperationalError: no such table: movies
+2024-01-25 10:22:45,499 - db_operations - ERROR - Error checking if movie exists. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:100
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 97, in movie_exists
+    cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
+sqlite3.OperationalError: no such table: movies
+2024-01-25 10:22:45,500 - db_operations - ERROR - Error checking if movie exists. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:100
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 97, in movie_exists
+    cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
+sqlite3.OperationalError: no such table: movies
+2024-01-25 10:22:45,501 - db_operations - ERROR - Error checking if movie exists. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:100
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 97, in movie_exists
+    cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
+sqlite3.OperationalError: no such table: movies
+2024-01-25 10:22:45,501 - db_operations - ERROR - Error checking if movie exists. - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py:100
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\db_operations.py", line 97, in movie_exists
+    cur.execute("SELECT 1 FROM movies WHERE url = ?", (url,))
+sqlite3.OperationalError: no such table: movies
+2024-01-25 10:27:09,460 - root - ERROR - An error occurred while processing 'Likime draugais' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:451
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 407, in deep_scrape_mediateka
+    click_optional_buttons(driver)
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 270, in click_optional_buttons
+    ).click()
+      ^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="btn btn--tertiary flex-grow-1 mr-xs-10" type="button" data-dismiss="modal">...</button> is not clickable at point (288, 384). Other element would receive the click: <div class="CybotCookiebotDialogBodyBottomWrapper">...</div>
+  (Session info: chrome-headless-shell=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x0031E48E]
+	(No symbol) [0x0031D09E]
+	(No symbol) [0x0031B5F8]
+	(No symbol) [0x0031AD7F]
+	(No symbol) [0x00312B4E]
+	(No symbol) [0x0033700C]
+	(No symbol) [0x003125B0]
+	(No symbol) [0x00337414]
+	(No symbol) [0x0034A104]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:27:18,931 - root - ERROR - An error occurred while processing 'Sausis' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:451
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 407, in deep_scrape_mediateka
+    click_optional_buttons(driver)
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 270, in click_optional_buttons
+    ).click()
+      ^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="btn btn--tertiary flex-grow-1 mr-xs-10" type="button" data-dismiss="modal">...</button> is not clickable at point (288, 384). Other element would receive the click: <div class="CybotCookiebotDialogBodyBottomWrapper">...</div>
+  (Session info: chrome-headless-shell=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x0031E48E]
+	(No symbol) [0x0031D09E]
+	(No symbol) [0x0031B5F8]
+	(No symbol) [0x0031AD7F]
+	(No symbol) [0x00312B4E]
+	(No symbol) [0x0033700C]
+	(No symbol) [0x003125B0]
+	(No symbol) [0x00337414]
+	(No symbol) [0x0034A104]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:27:28,368 - root - ERROR - An error occurred while processing 'Auksiniai vyrai' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:451
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 407, in deep_scrape_mediateka
+    click_optional_buttons(driver)
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 270, in click_optional_buttons
+    ).click()
+      ^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="btn btn--tertiary flex-grow-1 mr-xs-10" type="button" data-dismiss="modal">...</button> is not clickable at point (288, 384). Other element would receive the click: <div class="CybotCookiebotDialogBodyBottomWrapper">...</div>
+  (Session info: chrome-headless-shell=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x0031E48E]
+	(No symbol) [0x0031D09E]
+	(No symbol) [0x0031B5F8]
+	(No symbol) [0x0031AD7F]
+	(No symbol) [0x00312B4E]
+	(No symbol) [0x0033700C]
+	(No symbol) [0x003125B0]
+	(No symbol) [0x00337414]
+	(No symbol) [0x0034A104]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:27:33,397 - root - ERROR - An error occurred while processing 'Įsimylėję gyvenimą' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:451
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 407, in deep_scrape_mediateka
+    click_optional_buttons(driver)
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 270, in click_optional_buttons
+    ).click()
+      ^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="btn btn--tertiary flex-grow-1 mr-xs-10" type="button" data-dismiss="modal">...</button> is not clickable at point (288, 384). Other element would receive the click: <div class="CybotCookiebotDialogBodyBottomWrapper">...</div>
+  (Session info: chrome-headless-shell=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x0031E48E]
+	(No symbol) [0x0031D09E]
+	(No symbol) [0x0031B5F8]
+	(No symbol) [0x0031AD7F]
+	(No symbol) [0x00312B4E]
+	(No symbol) [0x0033700C]
+	(No symbol) [0x003125B0]
+	(No symbol) [0x00337414]
+	(No symbol) [0x0034A104]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:27:38,360 - root - ERROR - An error occurred while processing 'Naujienos iš Marso planetos' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:451
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 407, in deep_scrape_mediateka
+    click_optional_buttons(driver)
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 270, in click_optional_buttons
+    ).click()
+      ^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="btn btn--tertiary flex-grow-1 mr-xs-10" type="button" data-dismiss="modal">...</button> is not clickable at point (288, 384). Other element would receive the click: <div class="CybotCookiebotDialogBodyBottomWrapper">...</div>
+  (Session info: chrome-headless-shell=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x0031E48E]
+	(No symbol) [0x0031D09E]
+	(No symbol) [0x0031B5F8]
+	(No symbol) [0x0031AD7F]
+	(No symbol) [0x00312B4E]
+	(No symbol) [0x0033700C]
+	(No symbol) [0x003125B0]
+	(No symbol) [0x00337414]
+	(No symbol) [0x0034A104]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:30:42,014 - root - ERROR - An error occurred while processing 'Diena po rytojaus' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:451
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 404, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:30:43,021 - root - ERROR - An error occurred while processing 'Paryžietė' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:451
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 404, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:30:44,026 - root - ERROR - An error occurred while processing 'Žydrasis kaftanas' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:451
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 404, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:30:45,031 - root - ERROR - An error occurred while processing 'Gernsio literatūros ir bulvių lupenų pyrago draugija' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:451
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 404, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:30:46,034 - root - ERROR - An error occurred while processing 'Herkus Mantas (su garsiniu vaizdavimu)' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:451
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 404, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:30:47,037 - root - ERROR - An error occurred while processing 'Grufo vaikelis' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:451
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 404, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:30:48,041 - root - ERROR - An error occurred while processing 'Filomena' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:451
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 404, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:37:06,300 - root - ERROR - An error occurred while processing 'Likime draugais' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:452
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 408, in deep_scrape_mediateka
+    click_optional_buttons(driver)
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 270, in click_optional_buttons
+    ).click()
+      ^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="btn btn--tertiary flex-grow-1 mr-xs-10" type="button" data-dismiss="modal">...</button> is not clickable at point (288, 384). Other element would receive the click: <div class="CybotCookiebotDialogBodyBottomWrapper">...</div>
+  (Session info: chrome-headless-shell=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x0031E48E]
+	(No symbol) [0x0031D09E]
+	(No symbol) [0x0031B5F8]
+	(No symbol) [0x0031AD7F]
+	(No symbol) [0x00312B4E]
+	(No symbol) [0x0033700C]
+	(No symbol) [0x003125B0]
+	(No symbol) [0x00337414]
+	(No symbol) [0x0034A104]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:38:33,615 - root - ERROR - An error occurred while processing 'Auksiniai vyrai' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:452
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 404, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:38:34,623 - root - ERROR - An error occurred while processing 'Įsimylėję gyvenimą' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:452
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 404, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:38:35,635 - root - ERROR - An error occurred while processing 'Naujienos iš Marso planetos' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:452
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 404, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:38:36,641 - root - ERROR - An error occurred while processing 'Lietuvos olimpiečiai. Lengvaatletė Danutė Linkevičiūtė-Schmiedeck' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:452
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 404, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:38:37,647 - root - ERROR - An error occurred while processing 'Jausmai (su SKN titrais)' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:452
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 404, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:38:38,656 - root - ERROR - An error occurred while processing 'Jausmai' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:452
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 404, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:38:39,661 - root - ERROR - An error occurred while processing 'Gyvenimas po mirties' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:452
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 404, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:38:40,671 - root - ERROR - An error occurred while processing 'Dekadentas Nr. 2419' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:452
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 404, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:38:41,679 - root - ERROR - An error occurred while processing 'Pepė Ilgakojinė' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:452
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 404, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:38:42,683 - root - ERROR - An error occurred while processing 'Amundsenas' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:452
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 404, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:38:43,691 - root - ERROR - An error occurred while processing 'Apkabink mane stipriau' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:452
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 404, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:38:44,698 - root - ERROR - An error occurred while processing 'Diena po rytojaus' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:452
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 404, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:38:45,704 - root - ERROR - An error occurred while processing 'Paryžietė' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:452
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 404, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:38:46,715 - root - ERROR - An error occurred while processing 'Žydrasis kaftanas' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:452
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 404, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:38:47,722 - root - ERROR - An error occurred while processing 'Gernsio literatūros ir bulvių lupenų pyrago draugija' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:452
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 404, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:38:48,724 - root - ERROR - An error occurred while processing 'Herkus Mantas (su garsiniu vaizdavimu)' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:452
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 404, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:38:49,730 - root - ERROR - An error occurred while processing 'Grufo vaikelis' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:452
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 404, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:38:50,736 - root - ERROR - An error occurred while processing 'Filomena' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:452
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 404, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:38:51,742 - root - ERROR - An error occurred while processing 'Mažylis' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:452
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 404, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:38:52,748 - root - ERROR - An error occurred while processing 'Solsidanas' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:452
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 404, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:38:53,762 - root - ERROR - An error occurred while processing 'Kaltinamasis' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:452
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 404, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:38:54,771 - root - ERROR - An error occurred while processing 'Mano didžioji naktis' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:452
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 404, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 10:47:42,216 - root - ERROR - An error occurred while processing 'Likime draugais' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:455
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 411, in deep_scrape_mediateka
+    click_optional_buttons(driver)
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 269, in click_optional_buttons
+    button.click()
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="btn btn--tertiary flex-grow-1 mr-xs-10" type="button" data-dismiss="modal">...</button> is not clickable at point (288, 384). Other element would receive the click: <div class="CybotCookiebotDialogBodyBottomWrapper">...</div>
+  (Session info: chrome-headless-shell=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x0031E48E]
+	(No symbol) [0x0031D09E]
+	(No symbol) [0x0031B5F8]
+	(No symbol) [0x0031AD7F]
+	(No symbol) [0x00312B4E]
+	(No symbol) [0x0033700C]
+	(No symbol) [0x003125B0]
+	(No symbol) [0x00337414]
+	(No symbol) [0x0034A104]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:05:40,546 - root - ERROR - An error occurred while processing 'Likime draugais' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:460
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 416, in deep_scrape_mediateka
+    click_optional_buttons(driver)
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 274, in click_optional_buttons
+    ).click()
+      ^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="btn btn--tertiary flex-grow-1 mr-xs-10" type="button" data-dismiss="modal">...</button> is not clickable at point (288, 384). Other element would receive the click: <div class="CybotCookiebotDialogBodyBottomWrapper">...</div>
+  (Session info: chrome-headless-shell=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x0031E48E]
+	(No symbol) [0x0031D09E]
+	(No symbol) [0x0031B5F8]
+	(No symbol) [0x0031AD7F]
+	(No symbol) [0x00312B4E]
+	(No symbol) [0x0033700C]
+	(No symbol) [0x003125B0]
+	(No symbol) [0x00337414]
+	(No symbol) [0x0034A104]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:05:51,641 - root - ERROR - An error occurred while processing 'Sausis' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:460
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 416, in deep_scrape_mediateka
+    click_optional_buttons(driver)
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 274, in click_optional_buttons
+    ).click()
+      ^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="btn btn--tertiary flex-grow-1 mr-xs-10" type="button" data-dismiss="modal">...</button> is not clickable at point (288, 384). Other element would receive the click: <div class="CybotCookiebotDialogBodyBottomWrapper">...</div>
+  (Session info: chrome-headless-shell=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x0031E48E]
+	(No symbol) [0x0031D09E]
+	(No symbol) [0x0031B5F8]
+	(No symbol) [0x0031AD7F]
+	(No symbol) [0x00312B4E]
+	(No symbol) [0x0033700C]
+	(No symbol) [0x003125B0]
+	(No symbol) [0x00337414]
+	(No symbol) [0x0034A104]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:11:10,546 - root - ERROR - An error occurred while processing 'Likime draugais' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:461
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 417, in deep_scrape_mediateka
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 274, in click_optional_buttons
+    ).click()
+      ^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="btn btn--tertiary flex-grow-1 mr-xs-10" type="button" data-dismiss="modal">...</button> is not clickable at point (288, 384). Other element would receive the click: <div class="CybotCookiebotDialogBodyBottomWrapper">...</div>
+  (Session info: chrome-headless-shell=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x0031E48E]
+	(No symbol) [0x0031D09E]
+	(No symbol) [0x0031B5F8]
+	(No symbol) [0x0031AD7F]
+	(No symbol) [0x00312B4E]
+	(No symbol) [0x0033700C]
+	(No symbol) [0x003125B0]
+	(No symbol) [0x00337414]
+	(No symbol) [0x0034A104]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:11:21,818 - root - ERROR - An error occurred while processing 'Sausis' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:461
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 417, in deep_scrape_mediateka
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 274, in click_optional_buttons
+    ).click()
+      ^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="btn btn--tertiary flex-grow-1 mr-xs-10" type="button" data-dismiss="modal">...</button> is not clickable at point (288, 384). Other element would receive the click: <div class="CybotCookiebotDialogBodyBottomWrapper">...</div>
+  (Session info: chrome-headless-shell=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x0031E48E]
+	(No symbol) [0x0031D09E]
+	(No symbol) [0x0031B5F8]
+	(No symbol) [0x0031AD7F]
+	(No symbol) [0x00312B4E]
+	(No symbol) [0x0033700C]
+	(No symbol) [0x003125B0]
+	(No symbol) [0x00337414]
+	(No symbol) [0x0034A104]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:11:33,791 - root - ERROR - An error occurred while processing 'Auksiniai vyrai' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:461
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 417, in deep_scrape_mediateka
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 274, in click_optional_buttons
+    ).click()
+      ^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="btn btn--tertiary flex-grow-1 mr-xs-10" type="button" data-dismiss="modal">...</button> is not clickable at point (288, 384). Other element would receive the click: <div class="CybotCookiebotDialogBodyBottomWrapper">...</div>
+  (Session info: chrome-headless-shell=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x0031E48E]
+	(No symbol) [0x0031D09E]
+	(No symbol) [0x0031B5F8]
+	(No symbol) [0x0031AD7F]
+	(No symbol) [0x00312B4E]
+	(No symbol) [0x0033700C]
+	(No symbol) [0x003125B0]
+	(No symbol) [0x00337414]
+	(No symbol) [0x0034A104]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:11:39,659 - root - ERROR - An error occurred while processing 'Įsimylėję gyvenimą' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:461
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 417, in deep_scrape_mediateka
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 274, in click_optional_buttons
+    ).click()
+      ^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="btn btn--tertiary flex-grow-1 mr-xs-10" type="button" data-dismiss="modal">...</button> is not clickable at point (288, 384). Other element would receive the click: <div class="CybotCookiebotDialogBodyBottomWrapper">...</div>
+  (Session info: chrome-headless-shell=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x0031E48E]
+	(No symbol) [0x0031D09E]
+	(No symbol) [0x0031B5F8]
+	(No symbol) [0x0031AD7F]
+	(No symbol) [0x00312B4E]
+	(No symbol) [0x0033700C]
+	(No symbol) [0x003125B0]
+	(No symbol) [0x00337414]
+	(No symbol) [0x0034A104]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:11:45,629 - root - ERROR - An error occurred while processing 'Naujienos iš Marso planetos' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:461
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 417, in deep_scrape_mediateka
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 274, in click_optional_buttons
+    ).click()
+      ^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="btn btn--tertiary flex-grow-1 mr-xs-10" type="button" data-dismiss="modal">...</button> is not clickable at point (288, 384). Other element would receive the click: <div class="CybotCookiebotDialogBodyBottomWrapper">...</div>
+  (Session info: chrome-headless-shell=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x0031E48E]
+	(No symbol) [0x0031D09E]
+	(No symbol) [0x0031B5F8]
+	(No symbol) [0x0031AD7F]
+	(No symbol) [0x00312B4E]
+	(No symbol) [0x0033700C]
+	(No symbol) [0x003125B0]
+	(No symbol) [0x00337414]
+	(No symbol) [0x0034A104]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:17:24,266 - root - ERROR - An error occurred while processing 'Naujienos iš Marso planetos' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:457
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 413, in deep_scrape_mediateka
+    click_optional_buttons(driver)
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 267, in click_optional_buttons
+    if driver.find_elements(By.XPATH, xpath):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 772, in find_elements
+    return self.execute(Command.FIND_ELEMENTS, {"using": by, "value": value})["value"] or []
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:17:25,277 - root - ERROR - An error occurred while processing 'Lietuvos olimpiečiai. Lengvaatletė Danutė Linkevičiūtė-Schmiedeck' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:457
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 409, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:17:26,286 - root - ERROR - An error occurred while processing 'Jausmai (su SKN titrais)' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:457
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 409, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:17:27,297 - root - ERROR - An error occurred while processing 'Jausmai' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:457
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 409, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:17:28,303 - root - ERROR - An error occurred while processing 'Gyvenimas po mirties' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:457
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 409, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:20:27,928 - root - ERROR - An error occurred while processing 'Likime draugais' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:459
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 415, in deep_scrape_mediateka
+    click_optional_buttons(driver)
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 272, in click_optional_buttons
+    ).click()
+      ^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <a href="javascript:void(0)" onclick="$(this).replaceWith($('#content-more-lines').html());$('#content-more-lines').remove();">...</a> is not clickable at point (259, 890). Other element would receive the click: <div id="CybotCookiebotDialog" name="CybotCookiebotDialog" role="dialog" aria-modal="true" aria-labelledby="CybotCookiebotDialogBodyContentTitle" tabindex="-1" lang="lt" dir="ltr" ng-non-bindable="" style="display: flex;" data-template="slideup" class="CybotEdge CybotCloseButtonEnabled CybotCookiebotDialogActive">...</div>
+  (Session info: chrome-headless-shell=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x0031E48E]
+	(No symbol) [0x0031D09E]
+	(No symbol) [0x0031B5F8]
+	(No symbol) [0x0031AD7F]
+	(No symbol) [0x00312B4E]
+	(No symbol) [0x0033700C]
+	(No symbol) [0x003125B0]
+	(No symbol) [0x00337414]
+	(No symbol) [0x0034A104]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:20:34,186 - root - ERROR - An error occurred while processing 'Aukso karštligė' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:459
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 415, in deep_scrape_mediateka
+    click_optional_buttons(driver)
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 272, in click_optional_buttons
+    ).click()
+      ^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <a href="javascript:void(0)" onclick="$(this).replaceWith($('#content-more-lines').html());$('#content-more-lines').remove();">...</a> is not clickable at point (259, 890). Other element would receive the click: <div id="CybotCookiebotDialog" name="CybotCookiebotDialog" role="dialog" aria-modal="true" aria-labelledby="CybotCookiebotDialogBodyContentTitle" tabindex="-1" lang="lt" dir="ltr" ng-non-bindable="" style="display: flex;" data-template="slideup" class="CybotEdge CybotCloseButtonEnabled CybotCookiebotDialogActive">...</div>
+  (Session info: chrome-headless-shell=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x0031E48E]
+	(No symbol) [0x0031D09E]
+	(No symbol) [0x0031B5F8]
+	(No symbol) [0x0031AD7F]
+	(No symbol) [0x00312B4E]
+	(No symbol) [0x0033700C]
+	(No symbol) [0x003125B0]
+	(No symbol) [0x00337414]
+	(No symbol) [0x0034A104]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:29:12,016 - root - ERROR - An error occurred while processing 'Likime draugais' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:455
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 411, in deep_scrape_mediateka
+    click_optional_buttons(driver)
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 272, in click_optional_buttons
+    ).click()
+      ^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="btn btn--tertiary flex-grow-1 mr-xs-10" type="button" data-dismiss="modal">...</button> is not clickable at point (778, 465). Other element would receive the click: <h2 id="CybotCookiebotDialogBodyContentTitle" lang="lt">...</h2>
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x0031E48E]
+	(No symbol) [0x0031D09E]
+	(No symbol) [0x0031B5F8]
+	(No symbol) [0x0031AD7F]
+	(No symbol) [0x00312B4E]
+	(No symbol) [0x0033700C]
+	(No symbol) [0x003125B0]
+	(No symbol) [0x00337414]
+	(No symbol) [0x0034A104]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:29:18,880 - root - ERROR - An error occurred while processing 'Aukso karštligė' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:455
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 411, in deep_scrape_mediateka
+    click_optional_buttons(driver)
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 272, in click_optional_buttons
+    ).click()
+      ^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <a href="javascript:void(0)" onclick="$(this).replaceWith($('#content-more-lines').html());$('#content-more-lines').remove();">...</a> is not clickable at point (251, 752). Other element would receive the click: <div id="CybotCookiebotDialog" name="CybotCookiebotDialog" role="dialog" aria-modal="true" aria-labelledby="CybotCookiebotDialogBodyContentTitle" tabindex="-1" lang="lt" dir="ltr" ng-non-bindable="" style="display: flex;" data-template="slideup" class="CybotEdge CybotCloseButtonEnabled CybotCookiebotDialogActive">...</div>
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x0031E48E]
+	(No symbol) [0x0031D09E]
+	(No symbol) [0x0031B5F8]
+	(No symbol) [0x0031AD7F]
+	(No symbol) [0x00312B4E]
+	(No symbol) [0x0033700C]
+	(No symbol) [0x003125B0]
+	(No symbol) [0x00337414]
+	(No symbol) [0x0034A104]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:29:23,339 - root - ERROR - An error occurred while processing 'Sausis' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:455
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 411, in deep_scrape_mediateka
+    click_optional_buttons(driver)
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 269, in click_optional_buttons
+    if driver.find_elements(By.XPATH, xpath):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 772, in find_elements
+    return self.execute(Command.FIND_ELEMENTS, {"using": by, "value": value})["value"] or []
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:29:24,343 - root - ERROR - An error occurred while processing '1863 –1864 metų sukilimas' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:455
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 407, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:29:25,348 - root - ERROR - An error occurred while processing 'Auksiniai vyrai' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:455
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 407, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:29:26,356 - root - ERROR - An error occurred while processing 'Įsimylėję gyvenimą' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:455
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 407, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:29:27,362 - root - ERROR - An error occurred while processing 'Naujienos iš Marso planetos' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:455
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 407, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:29:28,365 - root - ERROR - An error occurred while processing 'Lietuvos olimpiečiai. Lengvaatletė Danutė Linkevičiūtė-Schmiedeck' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:455
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 407, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:29:29,370 - root - ERROR - An error occurred while processing 'Jausmai (su SKN titrais)' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:455
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 407, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:29:30,377 - root - ERROR - An error occurred while processing 'Jausmai' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:455
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 407, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:29:31,381 - root - ERROR - An error occurred while processing 'Gyvenimas po mirties' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:455
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 407, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:29:32,384 - root - ERROR - An error occurred while processing 'Dekadentas Nr. 2419' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:455
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 407, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:29:33,387 - root - ERROR - An error occurred while processing 'Pepė Ilgakojinė' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:455
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 407, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:29:34,391 - root - ERROR - An error occurred while processing 'Amundsenas' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:455
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 407, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:29:35,394 - root - ERROR - An error occurred while processing 'Apkabink mane stipriau' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:455
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 407, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:29:36,399 - root - ERROR - An error occurred while processing 'Diena po rytojaus' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:455
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 407, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:29:37,406 - root - ERROR - An error occurred while processing 'Paryžietė' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:455
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 407, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:29:38,412 - root - ERROR - An error occurred while processing 'Žydrasis kaftanas' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:455
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 407, in deep_scrape_mediateka
+    driver.get(f"{movie[1]}")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:36:38,411 - root - ERROR - An error occurred while processing 'Likime draugais' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:454
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 410, in deep_scrape_mediateka
+    click_optional_buttons(driver)
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 272, in click_optional_buttons
+    ).click()
+      ^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <a href="javascript:void(0)" onclick="$(this).replaceWith($('#content-more-lines').html());$('#content-more-lines').remove();">...</a> is not clickable at point (309, 1050). Other element would receive the click: <div id="CybotCookiebotDialog" name="CybotCookiebotDialog" role="dialog" aria-modal="true" aria-labelledby="CybotCookiebotDialogBodyContentTitle" tabindex="-1" lang="lt" dir="ltr" ng-non-bindable="" style="display: flex;" data-template="slideup" class="CybotEdge CybotCloseButtonEnabled CybotCookiebotDialogActive">...</div>
+  (Session info: chrome-headless-shell=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x0031E48E]
+	(No symbol) [0x0031D09E]
+	(No symbol) [0x0031B5F8]
+	(No symbol) [0x0031AD7F]
+	(No symbol) [0x00312B4E]
+	(No symbol) [0x0033700C]
+	(No symbol) [0x003125B0]
+	(No symbol) [0x00337414]
+	(No symbol) [0x0034A104]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:42:06,709 - root - ERROR - An error occurred while processing 'Likime draugais' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:456
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 412, in deep_scrape_mediateka
+    click_optional_buttons(driver)
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 274, in click_optional_buttons
+    ).click()
+      ^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <a href="javascript:void(0)" onclick="$(this).replaceWith($('#content-more-lines').html());$('#content-more-lines').remove();">...</a> is not clickable at point (309, 1050). Other element would receive the click: <div id="CybotCookiebotDialog" name="CybotCookiebotDialog" role="dialog" aria-modal="true" aria-labelledby="CybotCookiebotDialogBodyContentTitle" tabindex="-1" lang="lt" dir="ltr" ng-non-bindable="" style="display: flex;" data-template="slideup" class="CybotEdge CybotCloseButtonEnabled CybotCookiebotDialogActive">...</div>
+  (Session info: chrome-headless-shell=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x0031E48E]
+	(No symbol) [0x0031D09E]
+	(No symbol) [0x0031B5F8]
+	(No symbol) [0x0031AD7F]
+	(No symbol) [0x00312B4E]
+	(No symbol) [0x0033700C]
+	(No symbol) [0x003125B0]
+	(No symbol) [0x00337414]
+	(No symbol) [0x0034A104]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 11:42:12,890 - root - ERROR - An error occurred while processing 'Aukso karštligė' - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:456
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 412, in deep_scrape_mediateka
+    click_optional_buttons(driver)
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 274, in click_optional_buttons
+    ).click()
+      ^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <a href="javascript:void(0)" onclick="$(this).replaceWith($('#content-more-lines').html());$('#content-more-lines').remove();">...</a> is not clickable at point (309, 1050). Other element would receive the click: <div id="CybotCookiebotDialog" name="CybotCookiebotDialog" role="dialog" aria-modal="true" aria-labelledby="CybotCookiebotDialogBodyContentTitle" tabindex="-1" lang="lt" dir="ltr" ng-non-bindable="" style="display: flex;" data-template="slideup" class="CybotEdge CybotCloseButtonEnabled CybotCookiebotDialogActive">...</div>
+  (Session info: chrome-headless-shell=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x0031E48E]
+	(No symbol) [0x0031D09E]
+	(No symbol) [0x0031B5F8]
+	(No symbol) [0x0031AD7F]
+	(No symbol) [0x00312B4E]
+	(No symbol) [0x0033700C]
+	(No symbol) [0x003125B0]
+	(No symbol) [0x00337414]
+	(No symbol) [0x0034A104]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+
+2024-01-25 12:35:43,861 - root - ERROR - An error occurred during scraping - C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py:384
+Traceback (most recent call last):
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 323, in shallow_scrape_mediateka
+    load_lazy_content(driver)
+  File "C:\Users\tomui\Desktop\scraping\pythonProject\lrt_mediateka_scraping\scraping.py", line 78, in load_lazy_content
+    driver.execute_script(f"window.scrollTo(0, {scroll_position});")
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 408, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\tomui\Desktop\code_academy_ai_projects\lrt_mediateka_scraping\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x006A6EE3+174339]
+	(No symbol) [0x005D0A51]
+	(No symbol) [0x002E6FF6]
+	(No symbol) [0x002CEFE7]
+	(No symbol) [0x0033B53B]
+	(No symbol) [0x00349E7B]
+	(No symbol) [0x00336DA6]
+	(No symbol) [0x00311034]
+	(No symbol) [0x00311F8D]
+	GetHandleVerifier [0x00744B1C+820540]
+	sqlite3_dbdata_init [0x008053EE+653550]
+	sqlite3_dbdata_init [0x00804E09+652041]
+	sqlite3_dbdata_init [0x007F97CC+605388]
+	sqlite3_dbdata_init [0x00805D9B+656027]
+	(No symbol) [0x005DFE6C]
+	(No symbol) [0x005D83B8]
+	(No symbol) [0x005D84DD]
+	(No symbol) [0x005C5818]
+	BaseThreadInitThunk [0x76677BA9+25]
+	RtlInitializeExceptionChain [0x7748BD2B+107]
+	RtlClearBits [0x7748BCAF+191]
+

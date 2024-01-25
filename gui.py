@@ -11,7 +11,7 @@ from PIL.ImageTk import PhotoImage
 # Import functions and classes from other modules of the app
 from scraping import WebDriverContext
 from file_operations import shallow_scrape_wrapper, deep_scrape_wrapper
-from db_operations import execute_query as db_execute_query, remove_duplicate_movies
+from db_operations import execute_query as db_execute_query
 from config_loader import Config, LargeStrings
 
 # Create an instance of the Config class
@@ -153,11 +153,6 @@ def run_gui():
                                                                                       '/shallow_scrape_result_mediateka'
                                                                                       '.csv')
 
-    def remove_duplicates_from_databases() -> None:
-        """Checks and removes duplicates from data"""
-        for database in [config["data"]["epika"], config["data"]["mediateka"]]:
-            remove_duplicate_movies(database)
-
     # Main application window
     root = tk.Tk()
     root.geometry(config["gui"]["window_size"])
@@ -174,8 +169,6 @@ def run_gui():
     scrape_menu.add_command(label="Deep scrape Epika", command=lambda: proceed_deep_scrape_epika())
     scrape_menu.add_command(label="Shallow scrape Mediateka", command=lambda: proceed_shallow_scrape_mediateka())
     scrape_menu.add_command(label="Deep scrape Mediateka", command=lambda: proceed_deep_scrape_mediateka())
-    scrape_menu.add_command(label="Remove duplicate movies from data",
-                            command=lambda: remove_duplicates_from_databases())
 
     # Placeholder text for Entry and Combobox
     entry_placeholder = 'Write here your SQL query'
